@@ -141,6 +141,8 @@ add_action( 'widgets_init', 'lucianovanderveekens_theme_widgets_init' );
  */
 function lucianovanderveekens_theme_scripts() {
 	wp_enqueue_style( 'lucianovanderveekens-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'tailwindcss', get_template_directory_uri() . '/css/tailwind.prod.css', array(), filemtime(get_template_directory() .'/css/tailwind.prod.css'), 'all');
+
 	wp_style_add_data( 'lucianovanderveekens-theme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'lucianovanderveekens-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
