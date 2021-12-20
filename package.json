@@ -17,10 +17,12 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
+    "@wordpress/eslint-plugin": "^9.3.0",
     "@wordpress/scripts": "^12.1.0",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
     "dir-archiver": "^1.1.1",
+    "eslint": "^8.5.0",
     "node-sass": "^4.14.1",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
@@ -43,7 +45,6 @@
   "scripts": {
     "watch:postcss": "TAILWIND_MODE=watch postcss css/tailwind.css -o css/tailwind.prod.css -w",
     "watch:browser-sync": "browser-sync start --proxy 'http://127.0.0.1:8888' --files '**/*.php' '**/*.css'",
-
     "prod": "NODE_ENV=production TAILWIND_MODE=build postcss css/tailwind.css -o css/tailwind.prod.css",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",

@@ -17,22 +17,18 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<p>FUCK YOU!</p>
-	<button>Section</button>
 
-	<?php
-	while (have_posts()) :
-		the_post();
+	<div id="about-section" class="bg-red-200">
+		<h1>About</h1>
+	</div>
 
-		get_template_part('template-parts/content', 'page');
+	<div id="experience-section" class="bg-red-200">
+		<h1>Experience</h1>
+	</div>
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if (comments_open() || get_comments_number()) :
-			comments_template();
-		endif;
-
-	endwhile; // End of the loop.
-	?>
+	<div id="contact-section" class="bg-red-200">
+		<h1>Contact</h1>
+	</div>
 
 </main><!-- #main -->
 

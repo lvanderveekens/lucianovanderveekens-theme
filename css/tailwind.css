@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer components {
+
+  .primary-menu-container {
+    background-color: #073642;
+    padding: theme("spacing.6");
+  }
+} */
