@@ -47,13 +47,13 @@
 				<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
 			</nav>
 
-			<div id="hero-section" class="grid grid-cols-12 gap-4 items-center">
-				<div class="col-span-7">
+			<div id="hero-section" class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+				<div class="sm:col-span-7">
 					<h2 class="text-4xl font-bold">Hi, my name is</h2>
 					<h1 class="text-5xl font-extrabold"><span class="text-orange">Luciano van der Veekens</span>.</h1>
 					<h3 class="text-2xl">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3>
 				</div>
-				<div class="col-span-4 col-start-9">
+				<div class="sm:col-span-4 sm:col-start-9">
 					<img src=<?php echo get_template_directory_uri() . "/images/luciano.jpeg" ?> alt="Luciano">
 				</div>
 			</div>
