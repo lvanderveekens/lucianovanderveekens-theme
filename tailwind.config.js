@@ -1,21 +1,19 @@
 module.exports = {
 	mode: 'jit',
-	purge: [
-		'**/*.php',
-		'*.php',
-	],
+	purge: [ '**/*.php', '*.php' ],
 	content: [],
 	theme: {
-		extend: {
-			colors: {
-				base1: {
-					100: '#002B36',
-				},
-				base2: {
-					100: '#073642',
-				},
-			},
+		fontFamily: {
+			sans: [ 'Open Sans', 'sans-serif' ],
 		},
+		colors: {
+			// http://www.zovirl.com/2011/07/22/solarized_cheat_sheet/
+			base0: '#839496',
+			base02: '#073642',
+			base03: '#002B36',
+			orange: '#CB4B16',
+		},
+		extend: {},
 	},
 	plugins: [],
 };

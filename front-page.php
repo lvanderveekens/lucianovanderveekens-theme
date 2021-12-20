@@ -18,15 +18,15 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<div id="about-section" class="bg-red-200">
+	<div id="about-section" class="">
 		<h1>About</h1>
 	</div>
 
-	<div id="experience-section" class="bg-red-200">
+	<div id="experience-section" class="">
 		<h1>Experience</h1>
 	</div>
 
-	<div id="contact-section" class="bg-red-200">
+	<div id="contact-section" class="">
 		<h1>Contact</h1>
 	</div>
 

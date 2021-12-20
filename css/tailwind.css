@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-
-  .primary-menu-container {
-    background-color: #073642;
-    padding: theme("spacing.6");
+@layer components {
+  .menu-container > ul {
+    display: flex;
   }
-} */
+
+  .menu-container > ul > li {
+    padding-right: 2.5rem;
+  }
+}
