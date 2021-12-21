@@ -1,5 +1,20 @@
 @tailwind base;
 
+@layer base {
+  ul.colored-bullets {
+    @apply leading-4 ;
+    @apply pr-14;
+    list-style: none;
+  }
+
+  ul.colored-bullets li::before {
+    @apply px-4 ;
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: theme('colors.orange'); /* Change the color */
+    width: 2rem; /* Also needed for space (tweak if needed) */
+  }
+}
+
 @tailwind components;
 
 @layer components {
@@ -13,7 +28,8 @@
 
   .menu-container-desktop > ul > li {
     @apply text-2xl;
-    padding-right: 2.5rem;
+    @apply font-bold;
+    @apply pl-10;
   }
 
   .menu-container-mobile {

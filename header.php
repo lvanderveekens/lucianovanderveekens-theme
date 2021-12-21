@@ -29,7 +29,7 @@
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
 
-			<nav id="site-navigation" class="main-navigation bg-base02 text-base0-100">
+			<nav id="site-navigation" class="main-navigation px-4 bg-base02 text-base0-100">
 				<div class="flex justify-between items-center">
 					<div class="site-branding">
 						<h1 class="site-title text-orange text-xl font-bold py-7 sm:text-4xl">
@@ -47,10 +47,10 @@
 				<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
 			</nav>
 
-			<div id="hero-section" class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+			<div id="hero" class="container mx-auto px-4 md:mt-36 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
 				<div class="sm:col-span-7">
-					<h2 class="text-4xl font-bold">Hi, my name is</h2>
-					<h1 class="text-5xl font-extrabold"><span class="text-orange">Luciano van der Veekens</span>.</h1>
+					<h2 class="text-4xl font-bold mb-2">Hi, my name is</h2>
+					<h1 class="text-5xl font-extrabold mb-8"><span class="text-orange">Luciano van der Veekens</span>.</h1>
 					<h3 class="text-2xl">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3>
 				</div>
 				<div class="sm:col-span-4 sm:col-start-9">

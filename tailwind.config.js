@@ -12,6 +12,7 @@ module.exports = {
 			base02: '#073642',
 			base03: '#002B36',
 			orange: '#CB4B16',
+			blue: '#268bd2',
 		},
 		extend: {},
 	},

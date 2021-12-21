@@ -379,6 +379,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+  ul.colored-bullets {
+  line-height: 1rem;
+  padding-right: 3.5rem;
+    list-style: none;
+}
+
+  ul.colored-bullets li::before {
+  padding-left: 1rem;
+  padding-right: 1rem;
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #CB4B16; /* Change the color */
+    width: 2rem; /* Also needed for space (tweak if needed) */
+}
 
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -441,7 +454,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .menu-container-desktop > ul > li {
   font-size: 1.5rem;
   line-height: 2rem;
-    padding-right: 2.5rem;
+  font-weight: 700;
+  padding-left: 2.5rem;
 }
 
 .menu-container-mobile {
@@ -466,16 +480,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
-.col-span-7 {
-  grid-column: span 7 / span 7;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.col-span-4 {
-  grid-column: span 4 / span 4;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
-.col-start-9 {
-  grid-column-start: 9;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -488,14 +503,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .transform {
   transform: var(--tw-transform);
-}
-
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
@@ -514,6 +521,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1rem;
 }
 
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .bg-base03 {
   --tw-bg-opacity: 1;
   background-color: rgb(0 43 54 / var(--tw-bg-opacity));
@@ -524,6 +535,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(7 54 66 / var(--tw-bg-opacity));
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -531,11 +547,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-sans {
   font-family: Open Sans, sans-serif;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -553,6 +564,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -561,9 +577,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 800;
 }
 
-.text-base0 {
+.text-blue {
   --tw-text-opacity: 1;
-  color: rgb(131 148 150 / var(--tw-text-opacity));
+  color: rgb(38 139 210 / var(--tw-text-opacity));
 }
 
 .text-orange {
@@ -571,22 +587,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(203 75 22 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
+.text-base0 {
+  --tw-text-opacity: 1;
+  color: rgb(131 148 150 / var(--tw-text-opacity));
+}
 
-  .sm\:col-span-7 {
-    grid-column: span 7 / span 7;
-  }
+@media (min-width: 640px) {
 
   .sm\:col-span-4 {
     grid-column: span 4 / span 4;
   }
 
-  .sm\:col-start-9 {
-    grid-column-start: 9;
+  .sm\:col-span-7 {
+    grid-column: span 7 / span 7;
   }
 
-  .sm\:col-start-7 {
-    grid-column-start: 7;
+  .sm\:col-start-6 {
+    grid-column-start: 6;
+  }
+
+  .sm\:col-start-9 {
+    grid-column-start: 9;
   }
 
   .sm\:hidden {
@@ -597,24 +618,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:mt-36 {
+    margin-top: 9rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 }
