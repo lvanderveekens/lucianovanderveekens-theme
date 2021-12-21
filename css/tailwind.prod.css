@@ -443,6 +443,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.experience-logo {
+  aspect-ratio: 1 / 1;
+  width: 33.333333%;
+    /* @apply mx-auto; */
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.experience-logo img {
+    width: 100%;
+    margin: auto;
+  }
+
 .menu-container-desktop {
     display: none;
   }
@@ -480,6 +494,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -491,6 +509,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .block {
@@ -545,6 +571,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-base02 {
   --tw-bg-opacity: 1;
   background-color: rgb(7 54 66 / var(--tw-bg-opacity));
+}
+
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 75 22 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -614,16 +645,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 7 / span 7;
   }
 
-  .sm\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
   .sm\:col-span-9 {
     grid-column: span 9 / span 9;
   }
 
   .sm\:col-start-6 {
     grid-column-start: 6;
+  }
+
+  .sm\:col-start-4 {
+    grid-column-start: 4;
   }
 
   .sm\:col-start-9 {
@@ -646,11 +677,34 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 768px) {
 
+  .md\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:my-14 {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
   .md\:mt-36 {
     margin-top: 9rem;
   }
 
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 }
