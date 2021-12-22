@@ -47,7 +47,7 @@
 				<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
 			</nav>
 
-			<div id="hero" class="container mx-auto px-4 md:mt-36 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+			<div id="hero" class="container mx-auto px-4 sm:mt-36 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
 				<div class="sm:col-span-7">
 					<h2 class="text-4xl font-bold mb-2">Hi, my name is</h2>
 					<h1 class="text-5xl font-extrabold mb-8"><span class="text-orange">Luciano van der Veekens</span>.</h1>

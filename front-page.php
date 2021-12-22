@@ -18,9 +18,9 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<div id="about" class="container mx-auto px-4 md:mt-36">
+	<div id="about" class="container mx-auto px-4 sm:mt-36">
 		<h1 class="text-4xl font-bold text-blue">About</h1>
-		<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center justify-items-center md:mt-20">
+		<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center justify-items-center sm:mt-20">
 			<div class="sm:col-span-4">
 				<img src=<?php echo get_template_directory_uri() . "/images/luciano2.jpeg" ?> alt="Luciano">
 			</div>
@@ -50,18 +50,14 @@ get_header();
 						<li>Linux</li>
 					</ul>
 				</div>
-
-				<!-- <h2 class="text-4xl font-bold">Hi, my name is</h2>
-				<h1 class="text-5xl font-extrabold"><span class="text-orange">Luciano van der Veekens</span>.</h1>
-				<h3 class="text-2xl">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3> -->
 			</div>
 		</div>
 	</div>
 
-	<div id="experience" class="container mx-auto px-4 md:mt-36">
+	<div id="experience" class="container mx-auto px-4 sm:mt-36">
 		<h1 class="text-4xl font-bold text-blue">Experience</h1>
 		<div>
-			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 md:my-20">
+			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
 					<img class="experience-logo" src=<?php echo get_template_directory_uri() . "/images/ah-logo.png" ?> alt="Luciano">
 					<div class="font-bold">Software Engineer</div>
@@ -79,7 +75,7 @@ get_header();
 
 			<hr class="text-orange">
 
-			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 md:my-20">
+			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
 					<img class="experience-logo" src=<?php echo get_template_directory_uri() . "/images/bol-com-logo.png" ?> alt="Luciano">
 					<div class="font-bold">Software Engineer</div>
@@ -95,7 +91,7 @@ get_header();
 
 			<hr class="text-orange">
 
-			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 md:my-20">
+			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
 					<div class="experience-logo">
 						<img src=<?php echo get_template_directory_uri() . "/images/netinium-logo.png" ?> alt="Luciano">
@@ -115,8 +111,28 @@ get_header();
 		</div>
 	</div>
 
-	<div id="contact" class="container mx-auto px-4 md:mt-36">
-		<h1>Contact</h1>
+	<div id="contact" class="container mx-auto px-4 sm:mt-36">
+		<h1 class="text-4xl font-bold text-blue">Contact</h1>
+
+		<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center justify-items-center sm:mt-20">
+			<div class="sm:col-span-6 whitespace-pre-line">Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!
+
+				I'm available on some of the social networks, but you can also send an email to <a class="text-link" href="mailto:lucianovanderveekens@gmail.com">lucianovanderveekens@gmail.com</a>.
+
+				I'll try my best to get back to you.
+			</div>
+			<div class="sm:col-span-5 sm:col-start-8 w-full flex justify-between">
+				<div class="social-logo">
+					<?php echo file_get_contents(get_template_directory_uri() . '/images/twitter-logo.svg'); ?>
+				</div>
+				<div class="social-logo">
+					<?php echo file_get_contents(get_template_directory_uri() . '/images/instagram-logo.svg'); ?>
+				</div>
+				<div class="social-logo">
+					<?php echo file_get_contents(get_template_directory_uri() . '/images/github-logo.svg'); ?>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </main><!-- #main -->

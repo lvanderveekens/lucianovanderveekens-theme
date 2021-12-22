@@ -12,11 +12,10 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
-	<div class="site-info">
-		<p>Designed and built by Luciano van der Veekens</p>
-	</div><!-- .site-info -->
+<footer id="colophon" class="site-footer sm:mt-36 bg-base02 text-center text-sm py-8">
+	<p>Designed and built by Luciano van der Veekens</p>
 </footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

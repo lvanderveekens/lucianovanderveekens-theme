@@ -446,15 +446,28 @@ Ensure the default browser behavior of the `hidden` attribute.
 .experience-logo {
   aspect-ratio: 1 / 1;
   width: 33.333333%;
-    /* @apply mx-auto; */
-    margin-left: 2.5rem;
-    margin-bottom: 2rem;
-    display: flex;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
 }
 
 .experience-logo img {
     width: 100%;
     margin: auto;
+  }
+
+.social-logo {
+  aspect-ratio: 1 / 1;
+    width: 4rem;
+}
+
+.social-logo svg {
+    width: 100%;
+    height: 100%;
+  }
+
+.social-logo svg path {
+    fill: #CB4B16 !important;
   }
 
 .menu-container-desktop {
@@ -472,6 +485,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2.5rem;
 }
 
+.menu-container-desktop > ul > li > a:hover {
+    color: #268bd2;
+  }
+
 .menu-container-mobile {
     display: none;
   }
@@ -484,6 +501,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     .menu-container-mobile {
       display: none;
     }
+  }
+
+a.text-link {
+    color: #CB4B16;
+    text-decoration: underline;
+  }
+
+a.text-link:hover {
+    opacity: 0.85;
   }
 
 .visible {
@@ -511,14 +537,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .block {
   display: block;
 }
@@ -529,6 +547,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid {
   display: grid;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .transform {
@@ -563,19 +585,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: pre-line;
 }
 
-.bg-base03 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 43 54 / var(--tw-bg-opacity));
-}
-
 .bg-base02 {
   --tw-bg-opacity: 1;
   background-color: rgb(7 54 66 / var(--tw-bg-opacity));
 }
 
-.bg-orange {
+.bg-base03 {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 75 22 / var(--tw-bg-opacity));
+  background-color: rgb(0 43 54 / var(--tw-bg-opacity));
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-4 {
@@ -588,13 +610,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-sans {
   font-family: Open Sans, sans-serif;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-5xl {
@@ -605,11 +641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -649,6 +680,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 9 / span 9;
   }
 
+  .sm\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .sm\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
   .sm\:col-start-6 {
     grid-column-start: 6;
   }
@@ -657,8 +696,25 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column-start: 4;
   }
 
+  .sm\:col-start-8 {
+    grid-column-start: 8;
+  }
+
   .sm\:col-start-9 {
     grid-column-start: 9;
+  }
+
+  .sm\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .sm\:mt-36 {
+    margin-top: 9rem;
+  }
+
+  .sm\:mt-20 {
+    margin-top: 5rem;
   }
 
   .sm\:hidden {
@@ -672,39 +728,5 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .md\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .md\:my-14 {
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
-  }
-
-  .md\:my-20 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-
-  .md\:mt-36 {
-    margin-top: 9rem;
-  }
-
-  .md\:mt-20 {
-    margin-top: 5rem;
-  }
-
-  .md\:mb-20 {
-    margin-bottom: 5rem;
-  }
-
-  .md\:mb-10 {
-    margin-bottom: 2.5rem;
   }
 }
