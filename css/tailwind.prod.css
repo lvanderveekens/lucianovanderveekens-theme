@@ -379,19 +379,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
-  ul.colored-bullets {
-  line-height: 1rem;
-  margin-right: 3rem;
-    list-style: none;
-}
-
-  ul.colored-bullets li::before {
-  margin-left: 1rem;
-  margin-right: 1rem;
-    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: #CB4B16; /* Change the color */
-    width: 2rem; /* Also needed for space (tweak if needed) */
-}
 
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -402,16 +389,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-color: currentColor;
 }
 
 .container {
   width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 640px) {
 
   .container {
     max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -426,6 +418,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 1024px;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 }
 
@@ -433,13 +427,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
@@ -466,8 +455,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 100%;
   }
 
-.social-logo svg path {
-    fill: #CB4B16 !important;
+.social-logo :not(svg:hover path, svg:hover circle)
+   {
+    fill: #839496 !important;
   }
 
 .menu-container-desktop {
@@ -486,7 +476,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .menu-container-desktop > ul > li > a:hover {
-    color: #268bd2;
+    color: #CB4B16;
   }
 
 .menu-container-mobile {
@@ -505,12 +495,33 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 a.text-link {
     color: #CB4B16;
-    text-decoration: underline;
+    border-bottom: 1px solid #CB4B16;
+    padding-bottom: 3px;
+    /* text-decoration: underline; */
   }
 
 a.text-link:hover {
-    opacity: 0.85;
+    opacity: 0.8;
   }
+
+.cta {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(203 75 22 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(203 75 22 / var(--tw-text-opacity));
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.cta:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 75 22 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 43 54 / var(--tw-text-opacity));
+}
 
 .visible {
   visibility: visible;
@@ -529,6 +540,11 @@ a.text-link:hover {
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -537,8 +553,8 @@ a.text-link:hover {
   margin-bottom: 2rem;
 }
 
-.block {
-  display: block;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .flex {
@@ -555,6 +571,14 @@ a.text-link:hover {
 
 .transform {
   transform: var(--tw-transform);
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-1 {
@@ -610,6 +634,16 @@ a.text-link:hover {
   padding-bottom: 1.75rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -651,9 +685,8 @@ a.text-link:hover {
   font-weight: 800;
 }
 
-.text-blue {
-  --tw-text-opacity: 1;
-  color: rgb(38 139 210 / var(--tw-text-opacity));
+.leading-4 {
+  line-height: 1rem;
 }
 
 .text-orange {

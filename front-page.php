@@ -18,32 +18,31 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<div id="about" class="container mx-auto px-4 sm:mt-36">
-		<h1 class="text-4xl font-bold text-blue">About</h1>
+	<div id="about" class="container mx-auto sm:mt-36">
+		<h1 class="text-4xl font-bold text-orange">About</h1>
 		<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center justify-items-center sm:mt-20">
 			<div class="sm:col-span-4">
 				<img src=<?php echo get_template_directory_uri() . "/images/luciano2.jpeg" ?> alt="Luciano">
 			</div>
-			<div class="sm:col-span-7 sm:col-start-6 whitespace-pre-line">
-				Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.
+			<div class="sm:col-span-7 sm:col-start-6 whitespace-pre-line">Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.
 
 				My main interests are sofware architecture and writing clean code.
 
 				Here's a list featuring the technologies I'm most comfortable with:
 				<div class="flex flex-wrap">
-					<ul class="block colored-bullets">
+					<ul class="list-disc list-inside leading-4 mx-4">
 						<li>Java</li>
 						<li>Kotlin</li>
 						<li>Go</li>
 						<li>Spring Boot</li>
 					</ul>
-					<ul class="block colored-bullets">
+					<ul class="list-disc list-inside leading-4 mx-4">
 						<li>Docker</li>
 						<li>Kubernetes</li>
 						<li>Postgres</li>
 						<li>MongoDB</li>
 					</ul>
-					<ul class="block colored-bullets">
+					<ul class="list-disc list-inside leading-4 mx-4">
 						<li>Git</li>
 						<li>Maven</li>
 						<li>Jenkins</li>
@@ -54,8 +53,8 @@ get_header();
 		</div>
 	</div>
 
-	<div id="experience" class="container mx-auto px-4 sm:mt-36">
-		<h1 class="text-4xl font-bold text-blue">Experience</h1>
+	<div id="experience" class="container mx-auto sm:mt-36">
+		<h1 class="text-4xl font-bold text-orange">Experience</h1>
 		<div>
 			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
@@ -73,7 +72,7 @@ get_header();
 				</div>
 			</div>
 
-			<hr class="text-orange">
+			<hr class="text-base0">
 
 			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
@@ -89,7 +88,7 @@ get_header();
 				</div>
 			</div>
 
-			<hr class="text-orange">
+			<hr class="text-base0">
 
 			<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:my-20">
 				<div class="col-span-3">
@@ -111,8 +110,8 @@ get_header();
 		</div>
 	</div>
 
-	<div id="contact" class="container mx-auto px-4 sm:mt-36">
-		<h1 class="text-4xl font-bold text-blue">Contact</h1>
+	<div id="contact" class="container mx-auto sm:mt-36">
+		<h1 class="text-4xl font-bold text-orange">Contact</h1>
 
 		<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center justify-items-center sm:mt-20">
 			<div class="sm:col-span-6 whitespace-pre-line">Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!
@@ -122,15 +121,15 @@ get_header();
 				I'll try my best to get back to you.
 			</div>
 			<div class="sm:col-span-5 sm:col-start-8 w-full flex justify-between">
-				<div class="social-logo">
+				<a class="social-logo" href="https://twitter.com/lvdveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/twitter-logo.svg'); ?>
-				</div>
-				<div class="social-logo">
+				</a>
+				<a class="social-logo" href="https://www.instagram.com/lucianovanderveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/instagram-logo.svg'); ?>
-				</div>
-				<div class="social-logo">
+				</a>
+				<a class="social-logo" href="https://github.com/lucianovanderveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/github-logo.svg'); ?>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>

@@ -1,20 +1,5 @@
 @tailwind base;
 
-@layer base {
-  ul.colored-bullets {
-    @apply leading-4;
-    @apply mr-12;
-    list-style: none;
-  }
-
-  ul.colored-bullets li::before {
-    @apply mx-4;
-    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: theme("colors.orange"); /* Change the color */
-    width: 2rem; /* Also needed for space (tweak if needed) */
-  }
-}
-
 @tailwind components;
 
 @layer components {
@@ -42,8 +27,9 @@
     height: 100%;
   }
 
-  .social-logo svg path {
-    fill: theme("colors.orange") !important;
+  .social-logo :not(svg:hover path, svg:hover circle)
+   {
+    fill: theme("colors.base0") !important;
   }
 
   .menu-container-desktop {
@@ -61,7 +47,7 @@
   }
 
   .menu-container-desktop > ul > li > a:hover {
-    color: theme("colors.blue");
+    color: theme("colors.orange");
   }
 
   .menu-container-mobile {
@@ -80,11 +66,27 @@
 
   a.text-link {
     color: theme("colors.orange");
-    text-decoration: underline;
+    border-bottom: 1px solid theme("colors.orange");
+    padding-bottom: 3px;
+    /* text-decoration: underline; */
   }
 
   a.text-link:hover {
-    opacity: 0.85;
+    opacity: 0.8;
+  }
+  
+  .cta {
+    @apply border-2;
+    @apply border-orange;
+    @apply text-orange;
+    @apply text-2xl;
+    @apply font-bold;
+    @apply inline-block;
+  }
+
+  .cta:hover {
+    @apply bg-orange;
+    @apply text-base03;
   }
 }
 
