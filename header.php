@@ -47,11 +47,11 @@
 				<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
 			</nav>
 
-			<div id="hero" class="container mx-auto sm:mt-36 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
-				<div class="sm:col-span-7">
-					<h2 class="text-4xl font-bold mb-2">Hi, my name is</h2>
-					<h1 class="text-5xl font-extrabold mb-8"><span class="text-orange">Luciano van der Veekens</span>.</h1>
-					<h3 class="text-2xl mb-12">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3>
+			<div id="hero" class="section grid grid-cols-1 sm:grid-cols-12 gap-x-4 items-center">
+				<div class="mb-6 sm:mb-0 sm:col-span-7">
+					<h2 class="text-3xl font-bold mb-2">Hi, my name is</h2>
+					<h1 class="text-4xl font-extrabold mb-6"><span class="text-orange">Luciano van der Veekens</span>.</h1>
+					<h3 class="text-2xl mb-6">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3>
 					<a class="cta px-8 py-5" href="#contact">Contact Me</a>
 				</div>
 				<div class="sm:col-span-4 sm:col-start-9">
