@@ -15,7 +15,7 @@ module.exports = {
 		},
 		screens: {
 			sm: '640px',
-			md: '768px',
+			md: '768px' /* iPad */,
 			lg: '1024px',
 			xl: '1280px',
 		},
@@ -23,6 +23,7 @@ module.exports = {
 			padding: {
 				DEFAULT: '1rem',
 				sm: '2rem',
+				md: '3rem',
 				lg: '4rem',
 				xl: '5rem',
 			},
