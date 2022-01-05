@@ -24,15 +24,15 @@
 	<script src="https://kit.fontawesome.com/c7a5ab81d1.js" crossorigin="anonymous"></script>
 </head>
 
-<body <?php body_class('bg-base03 font-sans text-base0 text-xl'); ?>>
+<body <?php body_class('font-sans text-xl'); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
 
-			<nav id="site-navigation" class="main-navigation px-4 bg-base02 text-base0-100">
+			<nav id="site-navigation" class="main-navigation px-4">
 				<div class="flex justify-between items-center">
 					<div class="site-branding">
-						<h1 class="site-title text-orange font-bold py-7 text-xl md:text-2xl lg:text-4xl">
+						<h1 class="accent-text site-title font-['Satisfy'] font-bold py-7 text-3xl md:text-4xl lg:text-5xl">
 							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 						</h1>
 					</div>
@@ -48,14 +48,14 @@
 			</nav>
 
 			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
-				<div class="mb-6 md:mb-0 md:col-span-7">
+				<div class="mb-6 md:mb-0 md:col-span-8">
 					<h2 class="text-3xl font-bold mb-2">Hi, my name is</h2>
-					<h1 class="text-4xl font-extrabold mb-6"><span class="text-orange">Luciano van der Veekens</span>.</h1>
-					<h3 class="text-2xl mb-6">I’m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.</h3>
+					<h1 class="text-4xl font-extrabold mb-6"><span class="accent-text"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens'); ?></span>.</h1>
+					<h3 class="text-2xl mb-6"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.'); ?></h3>
 					<a class="cta px-8 py-5" href="#contact">Contact Me</a>
 				</div>
-				<div class="md:col-span-4 md:col-start-9">
-					<img src=<?php echo get_template_directory_uri() . "/images/luciano.jpeg" ?> alt="Luciano">
+				<div class="w-2/3 md:w-full mx-auto md:col-span-3 md:col-start-10">
+					<img class="aspect-square object-cover" src=<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image') ?> alt="Hero image">
 				</div>
 			</div>
 

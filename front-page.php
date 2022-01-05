@@ -21,8 +21,8 @@ get_header();
 	<div id="about" class="section">
 		<h1>About</h1>
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
-			<div class="mb-6 md:mb-0 md:col-span-4">
-				<img src=<?php echo get_template_directory_uri() . "/images/luciano2.jpeg" ?> alt="Luciano">
+			<div class="w-2/3 md:w-full mx-auto mb-6 md:mb-0 md:col-span-4">
+				<img class="aspect-square object-cover" src=<?php echo get_template_directory_uri() . "/images/luciano4.jpeg" ?> alt="Luciano">
 			</div>
 			<div class="md:col-span-7 md:col-start-6">
 				Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.

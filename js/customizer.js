@@ -39,4 +39,16 @@
 			}
 		} );
 	} );
+
+	// wp.customize( 'background_color', function( value ) {
+	// 	value.bind( function( newval ) {
+	// 		// $( 'body' ).css( 'background-color', newval.replace( /#/, '' ) );
+	// 	} );
+	// } );
+
+	// wp.customize( 'accent_color', function( value ) {
+	// 	value.bind( function( newval ) {
+	// 		// $( '.accent-color' ).css( 'color', newval.replace( /#/, '' ) );
+	// 	} );
+	// } );
 }( jQuery ) );
