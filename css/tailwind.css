@@ -90,6 +90,10 @@
     @apply mx-0;
   }
 
+  .menu-container-mobile > ul > li {
+    @apply py-2;
+  }
+
   @media screen(md) {
     .menu-container-desktop {
       display: block;

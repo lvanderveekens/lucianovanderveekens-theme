@@ -612,6 +612,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0px;
 }
 
+.menu-container-mobile > ul > li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 @media (min-width: 768px) {
     .menu-container-desktop {
       display: block;
