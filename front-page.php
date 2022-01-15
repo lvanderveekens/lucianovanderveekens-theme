@@ -22,7 +22,11 @@ get_header();
 		<h1>About</h1>
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
 			<div class="w-2/3 md:w-full mx-auto mb-6 md:mb-0 md:col-span-4">
-				<img class="aspect-square object-cover" src=<?php echo get_template_directory_uri() . "/images/luciano4.jpeg" ?> alt="Luciano">
+
+				<div class="aspect-ratio-box">
+					<img class="object-cover" src=<?php echo get_template_directory_uri() . "/images/luciano4.jpeg" ?> alt="Luciano">
+				</div>
+
 			</div>
 			<div class="md:col-span-7 md:col-start-6">
 				Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.
@@ -59,8 +63,10 @@ get_header();
 		<div>
 			<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
 				<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
-					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 aspect-ratio my-auto mr-6 md:ml-10 md:mb-8">
-						<img src=<?php echo get_template_directory_uri() . "/images/ah-logo.png" ?> alt="Luciano">
+					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 my-auto mr-6 md:ml-10 md:mb-8">
+						<div class="aspect-ratio-box">
+							<img src=<?php echo get_template_directory_uri() . "/images/ah-logo.png" ?> alt="Luciano">
+						</div>
 					</div>
 					<div>
 						<span class="font-bold">Software Engineer</span><br>
@@ -82,8 +88,10 @@ get_header();
 
 			<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
 				<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
-					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 aspect-square my-auto mr-6 md:ml-10 md:mb-8">
-						<img class="experience-logo" src=<?php echo get_template_directory_uri() . "/images/bol-com-logo.png" ?> alt="Luciano">
+					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 my-auto mr-6 md:ml-10 md:mb-8">
+						<div class="aspect-ratio-box">
+							<img class="experience-logo" src=<?php echo get_template_directory_uri() . "/images/bol-com-logo.png" ?> alt="Luciano">
+						</div>
 					</div>
 					<div>
 						<span class="font-bold">Software Engineer</span><br>
@@ -103,8 +111,10 @@ get_header();
 
 			<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
 				<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
-					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 aspect-square my-auto mr-6 md:ml-10 md:mb-8">
-						<img src=<?php echo get_template_directory_uri() . "/images/netinium-logo.png" ?> alt="Luciano">
+					<div class="flex items-center shrink-0 w-1/4 md:w-2/5 my-auto mr-6 md:ml-10 md:mb-8">
+						<div class="aspect-ratio-box">
+							<img src=<?php echo get_template_directory_uri() . "/images/netinium-logo.png" ?> alt="Luciano">
+						</div>
 					</div>
 					<div>
 						<span class="font-bold">Software Engineer</span><br>
@@ -136,13 +146,13 @@ get_header();
 				I'll try my best to get back to you.
 			</div>
 			<div class="md:col-span-5 md:col-start-8 w-full flex justify-between">
-				<a class="social-logo" href="https://twitter.com/lvdveekens">
+				<a class="social-logo" href="https://twitter.com/lvanderveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/twitter-logo.svg'); ?>
 				</a>
-				<a class="social-logo" href="https://www.instagram.com/lucianovanderveekens">
+				<a class="social-logo" href="https://www.instagram.com/lvanderveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/instagram-logo.svg'); ?>
 				</a>
-				<a class="social-logo" href="https://github.com/lucianovanderveekens">
+				<a class="social-logo" href="https://github.com/lvanderveekens">
 					<?php echo file_get_contents(get_template_directory_uri() . '/images/github-logo.svg'); ?>
 				</a>
 			</div>

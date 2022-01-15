@@ -13,6 +13,26 @@
 @tailwind components;
 
 @layer components {
+  .aspect-ratio-box {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  .aspect-ratio-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
   .section {
     @apply container;
     @apply mx-auto;

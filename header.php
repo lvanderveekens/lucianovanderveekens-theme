@@ -32,7 +32,7 @@
 			<nav id="site-navigation" class="main-navigation px-4">
 				<div class="flex justify-between items-center">
 					<div class="site-branding">
-						<h1 class="accent-text site-title font-['Satisfy'] font-bold py-7 text-3xl md:text-4xl lg:text-5xl">
+						<h1 class="accent-text site-title font-['Satisfy'] font-bold py-7 text-2xl md:text-4xl lg:text-5xl">
 							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 						</h1>
 					</div>
@@ -55,7 +55,9 @@
 					<a class="cta px-8 py-5" href="#contact">Contact Me</a>
 				</div>
 				<div class="w-2/3 md:w-full mx-auto md:col-span-3 md:col-start-10">
-					<img class="aspect-square object-cover" src=<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image') ?> alt="Hero image">
+					<div class="aspect-ratio-box">
+						<img class="object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image', get_template_directory_uri() . '/images/luciano3.jpeg') ?>" alt="Hero image">
+					</div>
 				</div>
 			</div>
 

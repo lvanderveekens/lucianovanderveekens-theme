@@ -40,7 +40,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 	$wp_customize->remove_section('background_image');
 	$wp_customize->remove_section('static_front_page');
 
-	// remove_theme_mod('lucianovanderveekens_theme_hero_description');
+	remove_theme_mod('lucianovanderveekens_theme_hero_image');
 
 	$wp_customize->add_section('lucianovanderveekens_theme_colors', array(
 		'title'    => 'Colors',
@@ -108,7 +108,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'type'     => 'textarea'
 	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_hero_image', array(
-		'default'           => get_theme_file_uri('images/luciano3.jpeg'), 
+		'default'           => get_template_directory_uri() . '/images/luciano3.jpeg', 
 		'sanitize_callback' => 'esc_url_raw'
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'lucianovanderveekens_theme_hero_image', array(
