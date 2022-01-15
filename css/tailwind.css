@@ -76,7 +76,8 @@
     @apply md:text-xl;
     @apply lg:text-2xl;
     @apply font-bold;
-    @apply pl-10;
+    @apply pl-7;
+    @apply lg:pl-10;
   }
 
   .menu-container-mobile {
