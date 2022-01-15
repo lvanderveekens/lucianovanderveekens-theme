@@ -21,7 +21,7 @@ get_header();
 	<div id="about" class="section">
 		<h1>About</h1>
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
-			<div class="w-2/3 md:w-full mx-auto mb-6 md:mb-0 md:col-span-4">
+			<div class="w-2/3 md:w-full mx-auto mb-12 md:mb-0 md:col-span-4">
 
 				<div class="aspect-ratio-box">
 					<img class="object-cover" src=<?php echo get_template_directory_uri() . "/images/luciano4.jpeg" ?> alt="Luciano">

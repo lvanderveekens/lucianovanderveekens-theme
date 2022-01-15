@@ -39,7 +39,7 @@
 
     @apply my-12;
     @apply md:my-20;
-    @apply lg:my-36;
+    @apply lg:my-32;
   }
 
   .section > h1 {
@@ -48,7 +48,8 @@
     /* @apply text-orange; */
 
     @apply mb-12;
-    @apply lg:mb-20;
+    @apply md:mb-20;
+    @apply lg:mb-32;
   }
 
   .social-logo {

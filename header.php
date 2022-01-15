@@ -48,7 +48,7 @@
 			</nav>
 
 			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
-				<div class="mb-6 md:mb-0 md:col-span-8">
+				<div class="mb-12 md:mb-0 md:col-span-8">
 					<h2 class="text-3xl font-bold mb-2">Hi, my name is</h2>
 					<h1 class="text-4xl font-extrabold mb-6"><span class="accent-text"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens'); ?></span>.</h1>
 					<h3 class="text-2xl mb-6"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.'); ?></h3>
