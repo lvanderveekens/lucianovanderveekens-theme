@@ -125,68 +125,68 @@ function theme_get_customizer_css()
 
 	$navbar_color = get_theme_mod('lucianovanderveekens_theme_navbar_color', '#073642');
 	if (!empty($navbar_color)) {
-		?>
+?>
 		nav, footer {
-			background-color: <?php echo $navbar_color; ?>;
+		background-color: <?php echo $navbar_color; ?>;
 		}
-		<?php
+	<?php
 	}
 
 	$background_color = get_theme_mod('lucianovanderveekens_theme_background_color', '#002B36');
 	if (!empty($background_color)) {
-		?>
+	?>
 		body {
-			background-color: <?php echo $background_color; ?>;
+		background-color: <?php echo $background_color; ?>;
 		}
-		<?php
+	<?php
 	}
 
 	$accent_color = get_theme_mod('lucianovanderveekens_theme_accent_color', '#CB4B16');
 	if (!empty($accent_color)) {
-		?>
+	?>
 		.section > h1 {
-			color: <?php echo $accent_color; ?>;
+		color: <?php echo $accent_color; ?>;
 		}
 
 		.accent-text {
-			color: <?php echo $accent_color; ?>;
+		color: <?php echo $accent_color; ?>;
 		}
 
 		.cta {
-			color: <?php echo $accent_color; ?>;
-			border-color: <?php echo $accent_color; ?>;
+		color: <?php echo $accent_color; ?>;
+		border-color: <?php echo $accent_color; ?>;
 		}
 		.cta:hover {
-			background-color: <?php echo $accent_color; ?>;
+		background-color: <?php echo $accent_color; ?>;
 		}
 
 		.menu-container-desktop > ul > li > a:hover {
-			color: <?php echo $accent_color; ?>; 
+		color: <?php echo $accent_color; ?>;
 		}
 
 		a.text-link {
-			color: <?php echo $accent_color; ?>; 
-			border-bottom: 1px solid <?php echo $accent_color; ?>; 
+		color: <?php echo $accent_color; ?>;
+		border-bottom: 1px solid <?php echo $accent_color; ?>;
 		}
 
-		<?php
+	<?php
 	}
 
 	$text_color = get_theme_mod('lucianovanderveekens_theme_text_color', '#839496');
 	if (!empty($text_color)) {
-		?>
+	?>
 		body {
-			color: <?php echo $text_color; ?>;
+		color: <?php echo $text_color; ?>;
 		}
 
 		.cta:hover {
-			color: <?php echo $text_color; ?>;
+		color: <?php echo $text_color; ?>;
 		}
 
 		.social-logo :not(svg:hover path, svg:hover circle) {
-			fill: <?php echo $text_color; ?> !important;
+		fill: <?php echo $text_color; ?> !important;
 		}
-		<?php
+<?php
 	}
 
 	$css = ob_get_clean();
@@ -212,6 +212,202 @@ function lucianovanderveekens_theme_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'lucianovanderveekens_theme_scripts');
+
+function register_custom_post_types()
+{
+	register_post_type(
+		'experience',
+		array(
+			'labels' => array(
+				'name' => __('Experience'),
+				'singular_name' => __('Experience')
+			),
+			'supports' => array(
+				'title',
+				'custom-fields',
+				'page-attributes',
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'experience'),
+			'show_in_rest' => true,
+			'menu_icon' => 'dashicons-businessman',
+
+		)
+	);
+}
+// Hooking up our function to theme setup
+add_action('init', 'register_custom_post_types');
+
+function change_columns($cols)
+{
+	$cols = array(
+		'cb'         => '<input type="checkbox" />',
+		'title'      => 'Title',
+		'date'       => 'Date',
+		'order'      => 'Order',
+	);
+	return $cols;
+}
+add_filter("manage_experience_posts_columns", "change_columns");
+
+function custom_columns($column)
+{
+	global $post;
+	if ($column == 'order') {
+		echo $post->menu_order;
+	}
+}
+add_action("manage_experience_posts_custom_column", "custom_columns", 10, 2);
+
+// Generated using ACF plugin
+if (function_exists('acf_add_local_field_group')) :
+
+	acf_add_local_field_group(array(
+		'key' => 'group_61e321b46c4d2',
+		'title' => 'Experience field group',
+		'fields' => array(
+			array(
+				'key' => 'field_61e321c36d0ef',
+				'label' => 'Employer name',
+				'name' => 'employer-name',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_61e323201d695',
+				'label' => 'Employer image',
+				'name' => 'employer-image',
+				'type' => 'image',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => '',
+				'max_height' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+			array(
+				'key' => 'field_61e3227598dc3',
+				'label' => 'Role',
+				'name' => 'role',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_61e3227e98dc4',
+				'label' => 'When',
+				'name' => 'when',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_61e322a198dc5',
+				'label' => 'Location',
+				'name' => 'location',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_61e32417deeb9',
+				'label' => 'Summary',
+				'name' => 'summary',
+				'type' => 'wysiwyg',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'tabs' => 'all',
+				'toolbar' => 'full',
+				'media_upload' => 0,
+				'delay' => 0,
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'experience',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	));
+
+endif;
 
 /**
  * Implement the Custom Header feature.
