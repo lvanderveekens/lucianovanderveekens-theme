@@ -735,6 +735,10 @@ a.text-link:hover {
        column-gap: 1rem;
 }
 
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -808,6 +812,10 @@ a.text-link:hover {
 
 .font-extrabold {
   font-weight: 800;
+}
+
+.italic {
+  font-style: italic;
 }
 
 @media (min-width: 768px) {

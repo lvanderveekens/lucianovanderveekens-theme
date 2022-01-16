@@ -116,6 +116,21 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'section'  => 'lucianovanderveekens_theme_hero',
 		'settings' => 'lucianovanderveekens_theme_hero_image'
 	)));
+
+	$wp_customize->add_section('lucianovanderveekens_theme_about', array(
+		'title'    => 'About',
+		'priority' => 50,
+	));
+	$wp_customize->add_setting('lucianovanderveekens_theme_about_description', array(
+		'default'           => 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.',
+		'sanitize_callback' => 'sanitize_textarea_field'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lucianovanderveekens_theme_about_description', array(
+		'label'    => 'About description',
+		'section'  => 'lucianovanderveekens_theme_about',
+		'settings' => 'lucianovanderveekens_theme_about_description',
+		'type'     => 'textarea'
+	)));
 }
 add_action('customize_register', 'lucianovanderveekens_theme_customize_register');
 
@@ -147,3 +162,4 @@ function lucianovanderveekens_theme_customize_preview_js()
 	wp_enqueue_script('lucianovanderveekens-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), _S_VERSION, true);
 }
 add_action('customize_preview_init', 'lucianovanderveekens_theme_customize_preview_js');
+			

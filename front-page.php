@@ -20,7 +20,7 @@ get_header();
 
 	<div id="about" class="section">
 		<h1>About</h1>
-		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
+		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4">
 			<div class="w-2/3 md:w-full mx-auto mb-12 md:mb-0 md:col-span-4">
 
 				<div class="aspect-ratio-box">
@@ -28,33 +28,9 @@ get_header();
 				</div>
 
 			</div>
-			<div class="md:col-span-7 md:col-start-6">
-				Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.
-				<br><br>
-				My main interests are sofware architecture and writing clean code.
-				<br><br>
-				Here's a list featuring the technologies I'm most comfortable with:
-				<div class="flex flex-wrap">
-					<ul>
-						<li>Java</li>
-						<li>Kotlin</li>
-						<li>Go</li>
-						<li>Spring Boot</li>
-					</ul>
-					<ul>
-						<li>Docker</li>
-						<li>Kubernetes</li>
-						<li>Postgres</li>
-						<li>MongoDB</li>
-					</ul>
-					<ul>
-						<li>Git</li>
-						<li>Maven</li>
-						<li>Jenkins</li>
-						<li>Linux</li>
-					</ul>
-				</div>
-			</div>
+			<div class="md:col-span-7 md:col-start-6 whitespace-pre-line"><?php
+				echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.'); 
+			?> </div>
 		</div>
 	</div>
 
