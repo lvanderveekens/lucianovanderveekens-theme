@@ -186,7 +186,7 @@ function theme_get_customizer_css()
 		.social-logo :not(svg:hover path, svg:hover circle) {
 		fill: <?php echo $text_color; ?> !important;
 		}
-		<?php
+<?php
 	}
 
 	$css = ob_get_clean();

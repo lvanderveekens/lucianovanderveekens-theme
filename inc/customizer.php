@@ -108,7 +108,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'type'     => 'textarea'
 	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_hero_image', array(
-		'default'           => get_template_directory_uri() . '/images/luciano3.jpeg', 
+		'default'           => get_template_directory_uri() . '/images/luciano3.jpeg',
 		'sanitize_callback' => 'esc_url_raw'
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'lucianovanderveekens_theme_hero_image', array(
@@ -121,16 +121,20 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'title'    => 'About',
 		'priority' => 50,
 	));
-	$wp_customize->add_setting('lucianovanderveekens_theme_about_description', array(
-		'default'           => 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.',
-		'sanitize_callback' => 'sanitize_textarea_field'
+	$wp_customize->add_setting('lucianovanderveekens_theme_about_image', array(
+		'default'           => get_template_directory_uri() . '/images/luciano4.jpeg',
+		'sanitize_callback' => 'esc_url_raw'
 	));
-	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lucianovanderveekens_theme_about_description', array(
-		'label'    => 'About description',
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'lucianovanderveekens_theme_about_image', array(
+		'label'    => 'About image',
 		'section'  => 'lucianovanderveekens_theme_about',
-		'settings' => 'lucianovanderveekens_theme_about_description',
-		'type'     => 'textarea'
+		'settings' => 'lucianovanderveekens_theme_about_image'
 	)));
+
+	$wp_customize->add_section('lucianovanderveekens_theme_contact', array(
+		'title'    => 'Contact',
+		'priority' => 60,
+	));
 }
 add_action('customize_register', 'lucianovanderveekens_theme_customize_register');
 
@@ -162,4 +166,27 @@ function lucianovanderveekens_theme_customize_preview_js()
 	wp_enqueue_script('lucianovanderveekens-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), _S_VERSION, true);
 }
 add_action('customize_preview_init', 'lucianovanderveekens_theme_customize_preview_js');
-			
+
+if (class_exists('Kirki')) {
+	Kirki::add_config('base', array(
+		'capability'    => 'edit_theme_options',
+		'option_type'   => 'theme_mod',
+		'option_name'   => 'base',
+	));
+
+	Kirki::add_field('base', array(
+		'type'        => 'editor',
+		'settings'    => 'lucianovanderveekens_theme_about_description',
+		'label'       => __('About description', 'base'),
+		'section'     => 'lucianovanderveekens_theme_about',
+		'default'     => 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.',
+	));
+
+	Kirki::add_field('base', array(
+		'type'        => 'editor',
+		'settings'    => 'lucianovanderveekens_theme_contact_description',
+		'label'       => __('Contact description', 'base'),
+		'section'     => 'lucianovanderveekens_theme_contact',
+		'default'     => "Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!\n\nI'm available on some of the social networks, but you can also send an email to <a class=\"text-link\" href=\"mailto:lucianovanderveekens@gmail.com\">lucianovanderveekens@gmail.com</a>.\n\nI'll try my best to get back to you.",
+	));
+}
