@@ -52,7 +52,7 @@
 					<h2 class="text-3xl font-bold mb-2">Hi, my name is</h2>
 					<h1 class="text-4xl font-extrabold mb-6"><span class="accent-text"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens'); ?></span>.</h1>
 					<h3 class="text-2xl mb-6"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.'); ?></h3>
-					<a class="cta px-8 py-5" href="#contact">Contact Me</a>
+					<a class="cta px-6 py-4" href="#contact">Contact Me</a>
 				</div>
 				<div class="w-2/3 md:w-full mx-auto md:col-span-3 md:col-start-10">
 					<div class="aspect-ratio-box">

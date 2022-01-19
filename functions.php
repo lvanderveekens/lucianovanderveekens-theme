@@ -138,6 +138,10 @@ function theme_get_customizer_css()
 		body {
 		background-color: <?php echo $background_color; ?>;
 		}
+
+		.cta:hover {
+		color: <?php echo $background_color; ?>;
+		}
 	<?php
 	}
 
@@ -176,10 +180,6 @@ function theme_get_customizer_css()
 	if (!empty($text_color)) {
 	?>
 		body {
-		color: <?php echo $text_color; ?>;
-		}
-
-		.cta:hover {
 		color: <?php echo $text_color; ?>;
 		}
 
