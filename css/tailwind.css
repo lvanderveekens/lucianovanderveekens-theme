@@ -103,8 +103,10 @@
     padding-bottom: 3px;
   }
 
-  a.text-link:hover {
-    opacity: 0.8;
+  @media (hover: hover) {
+    a.text-link:hover {
+      opacity: 0.8;
+    }
   }
 
   .cta {

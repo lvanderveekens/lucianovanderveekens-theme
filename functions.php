@@ -139,8 +139,10 @@ function theme_get_customizer_css()
 		background-color: <?php echo $background_color; ?>;
 		}
 
-		.cta:hover {
-		color: <?php echo $background_color; ?>;
+		@media (hover: hover) {
+			.cta:hover {
+				color: <?php echo $background_color; ?>;
+			}
 		}
 	<?php
 	}
@@ -160,8 +162,11 @@ function theme_get_customizer_css()
 		color: <?php echo $accent_color; ?>;
 		border-color: <?php echo $accent_color; ?>;
 		}
-		.cta:hover {
-		background-color: <?php echo $accent_color; ?>;
+
+		@media (hover: hover) {
+			.cta:hover {
+				background-color: <?php echo $accent_color; ?>;
+			}
 		}
 
 		.menu-container-desktop > ul > li > a:hover {
