@@ -33,7 +33,6 @@ get_header();
 	<div id="experience" class="section">
 		<h1>Experience</h1>
 		<div>
-
 			<?php
 			$the_query = new WP_Query(array('post_type' => 'experience', 'order' => 'ASC'));
 			?>
@@ -84,15 +83,24 @@ get_header();
 			<div class="md:col-span-6 mb-12 md:mb-0 whitespace-pre-line"><?php echo get_theme_mod('lucianovanderveekens_theme_contact_description', "Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!\n\nI'm available on some of the social networks, but you can also send an email to <a class=\"text-link\" href=\"mailto:lucianovanderveekens@gmail.com\">lucianovanderveekens@gmail.com</a>.\n\nI'll try my best to get back to you."); ?></div>
 
 			<div class="md:col-span-5 md:col-start-8 w-full flex justify-between">
-				<a class="social-logo" href="https://twitter.com/lvanderveekens">
-					<?php echo file_get_contents(get_template_directory_uri() . '/images/twitter-logo.svg'); ?>
-				</a>
-				<a class="social-logo" href="https://www.instagram.com/lvanderveekens">
-					<?php echo file_get_contents(get_template_directory_uri() . '/images/instagram-logo.svg'); ?>
-				</a>
-				<a class="social-logo" href="https://github.com/lvanderveekens">
-					<?php echo file_get_contents(get_template_directory_uri() . '/images/github-logo.svg'); ?>
-				</a>
+				<?php
+				$the_query = new WP_Query(array('post_type' => 'social', 'order' => 'ASC'));
+				?>
+				<?php if ($the_query->have_posts()) : ?>
+					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+						<a class="social-logo" href="<?php echo get_field('url') ?>">
+							<?php $image_id = get_field('icon'); ?>
+							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
+							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+
+							<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+						</a>
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+				<?php else : ?>
+					<p><?php _e('No socials found! Add them in the WP Admin Dashboard.'); ?></p>
+				<?php endif; ?>
+
 			</div>
 		</div>
 	</div>

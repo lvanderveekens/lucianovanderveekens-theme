@@ -183,9 +183,6 @@ function theme_get_customizer_css()
 		color: <?php echo $text_color; ?>;
 		}
 
-		.social-logo :not(svg:hover path, svg:hover circle) {
-		fill: <?php echo $text_color; ?> !important;
-		}
 <?php
 	}
 
@@ -232,7 +229,25 @@ function register_custom_post_types()
 			'rewrite' => array('slug' => 'experience'),
 			'show_in_rest' => true,
 			'menu_icon' => 'dashicons-businessman',
-
+		)
+	);
+	register_post_type(
+		'social',
+		array(
+			'labels' => array(
+				'name' => __('Socials'),
+				'singular_name' => __('Social')
+			),
+			'supports' => array(
+				'title',
+				'custom-fields',
+				'page-attributes',
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'social'),
+			'show_in_rest' => true,
+			'menu_icon' => 'dashicons-instagram',
 		)
 	);
 }
@@ -250,6 +265,7 @@ function change_columns($cols)
 	return $cols;
 }
 add_filter("manage_experience_posts_columns", "change_columns");
+add_filter("manage_social_posts_columns", "change_columns");
 
 function custom_columns($column)
 {
@@ -259,6 +275,7 @@ function custom_columns($column)
 	}
 }
 add_action("manage_experience_posts_custom_column", "custom_columns", 10, 2);
+add_action("manage_social_posts_custom_column", "custom_columns", 10, 2);
 
 // Generated using ACF plugin
 if (function_exists('acf_add_local_field_group')) :
@@ -393,6 +410,71 @@ if (function_exists('acf_add_local_field_group')) :
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'experience',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_61e85c07e5776',
+		'title' => 'Social field group',
+		'fields' => array(
+			array(
+				'key' => 'field_61e85c4c6ae5a',
+				'label' => 'Icon',
+				'name' => 'icon',
+				'type' => 'image',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'id',
+				'preview_size' => 'medium',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => '',
+				'max_height' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+			array(
+				'key' => 'field_61e85c0d6ae59',
+				'label' => 'URL',
+				'name' => 'url',
+				'type' => 'url',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'social',
 				),
 			),
 		),

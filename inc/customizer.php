@@ -135,6 +135,21 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'title'    => 'Contact',
 		'priority' => 60,
 	));
+
+	$wp_customize->add_section('lucianovanderveekens_theme_footer', array(
+		'title'    => 'Footer',
+		'priority' => 70,
+	));
+	$wp_customize->add_setting('lucianovanderveekens_theme_footer_text', array(
+		'default'           => 'Designed and built by Luciano van der Veekens',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lucianovanderveekens_theme_footer_text', array(
+		'label'    => 'Footer text',
+		'section'  => 'lucianovanderveekens_theme_footer',
+		'settings' => 'lucianovanderveekens_theme_footer_text',
+		'type'     => 'text'
+	)));
 }
 add_action('customize_register', 'lucianovanderveekens_theme_customize_register');
 
