@@ -22,6 +22,19 @@
 	<?php wp_head(); ?>
 
 	<script src="https://kit.fontawesome.com/c7a5ab81d1.js" crossorigin="anonymous"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYPF1G6EZB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-VYPF1G6EZB');
+	</script>
 </head>
 
 <body <?php body_class('font-sans text-xl'); ?>>
