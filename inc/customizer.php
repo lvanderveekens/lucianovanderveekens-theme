@@ -40,7 +40,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 	$wp_customize->remove_section('background_image');
 	$wp_customize->remove_section('static_front_page');
 
-	remove_theme_mod('lucianovanderveekens_theme_hero_image');
+	// remove_theme_mod('lucianovanderveekens_theme_hero_image');
 
 	$wp_customize->add_section('lucianovanderveekens_theme_colors', array(
 		'title'    => 'Colors',
