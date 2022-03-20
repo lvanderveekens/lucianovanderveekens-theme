@@ -34,7 +34,7 @@ get_header();
 		<h1>Experience</h1>
 		<div>
 			<?php
-			$the_query = new WP_Query(array('post_type' => 'experience', 'order' => 'ASC'));
+			$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
 			?>
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -84,7 +84,7 @@ get_header();
 
 			<div class="md:col-span-5 md:col-start-8 w-full flex justify-between">
 				<?php
-				$the_query = new WP_Query(array('post_type' => 'social', 'order' => 'ASC'));
+				$the_query = new WP_Query(array('post_type' => 'social', 'orderby' => 'menu_order'));
 				?>
 				<?php if ($the_query->have_posts()) : ?>
 					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
