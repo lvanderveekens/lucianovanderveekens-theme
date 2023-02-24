@@ -32,7 +32,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Open Sans, sans-serif; /* 4 */
+  font-family: Raleway, sans-serif; /* 4 */
 }
 
 /*
@@ -648,9 +648,20 @@ a.text-link {
   position: static;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+.col-start-auto {
+  grid-column-start: auto;
 }
 
 .my-12 {
@@ -663,8 +674,17 @@ a.text-link {
   margin-bottom: auto;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-0\.5 {
+  margin-bottom: 0.125rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-6 {
@@ -675,8 +695,24 @@ a.text-link {
   margin-right: 1.5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -687,8 +723,16 @@ a.text-link {
   display: grid;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
+.h-2\.5 {
+  height: 0.625rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-1\/4 {
@@ -699,6 +743,18 @@ a.text-link {
   width: 100%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -707,12 +763,37 @@ a.text-link {
   transform: var(--tw-transform);
 }
 
+.auto-cols-min {
+  grid-auto-columns: -webkit-min-content;
+  grid-auto-columns: min-content;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.content-center {
+  align-content: center;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -730,6 +811,20 @@ a.text-link {
 
 .whitespace-pre-line {
   white-space: pre-line;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -767,11 +862,7 @@ a.text-link {
 }
 
 .font-sans {
-  font-family: Open Sans, sans-serif;
-}
-
-.font-\[\'Satisfy\'\] {
-  font-family: 'Satisfy';
+  font-family: Raleway, sans-serif;
 }
 
 .text-sm {
@@ -784,37 +875,24 @@ a.text-link {
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
   font-weight: 700;
 }
 
-.font-extrabold {
-  font-weight: 800;
-}
-
 @media (min-width: 768px) {
 
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
-  }
-
-  .md\:col-span-7 {
-    grid-column: span 7 / span 7;
   }
 
   .md\:col-span-8 {
@@ -829,14 +907,6 @@ a.text-link {
     grid-column: span 5 / span 5;
   }
 
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .md\:col-start-6 {
-    grid-column-start: 6;
-  }
-
   .md\:col-start-5 {
     grid-column-start: 5;
   }
@@ -845,8 +915,8 @@ a.text-link {
     grid-column-start: 8;
   }
 
-  .md\:col-start-10 {
-    grid-column-start: 10;
+  .md\:col-start-9 {
+    grid-column-start: 9;
   }
 
   .md\:my-20 {
@@ -874,21 +944,21 @@ a.text-link {
     display: none;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:w-2\/5 {
     width: 40%;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -910,8 +980,8 @@ a.text-link {
     margin-top: 9rem;
   }
 
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

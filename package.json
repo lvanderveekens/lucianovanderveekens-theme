@@ -23,6 +23,7 @@
     "browser-sync": "^2.27.7",
     "dir-archiver": "^1.1.1",
     "eslint": "^8.5.0",
+    "livereload": "^0.9.3",
     "node-sass": "^4.14.1",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
@@ -43,6 +44,7 @@
     "map": false
   },
   "scripts": {
+    "livereload": "livereload",
     "watch:postcss": "TAILWIND_MODE=watch postcss css/tailwind.css -o css/tailwind.prod.css -w",
     "watch:browser-sync": "browser-sync start --proxy 'http://127.0.0.1:8888' --files '**/*.php' '**/*.css'",
     "prod": "NODE_ENV=production TAILWIND_MODE=build postcss css/tailwind.css -o css/tailwind.prod.css",

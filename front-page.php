@@ -19,19 +19,40 @@ get_header();
 <main id="primary" class="site-main">
 
 	<div id="about" class="section">
-		<h1>About</h1>
-		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4">
-			<div class="w-2/3 md:w-full mx-auto mb-12 md:mb-0 md:col-span-4">
-				<div class="aspect-ratio-box">
-					<img class="object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_about_image', get_template_directory_uri() . '/images/luciano4.jpeg') ?>" alt="About image">
+		<h1><span>About</span></h1>
+		<div class="grid grid-cols-12 gap-x-4">
+			<div class="col-span-5">
+				<div class="font-bold">Who?</div>
+				<div class="whitespace-pre-line">
+					<?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I\'ve studied Computer Science at Utrecht University and I\'m currently helping customers buy their groceries online at Albert Heijn.'); ?> 
 				</div>
 			</div>
-			<div class="md:col-span-7 md:col-start-6 whitespace-pre-line"><?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I’ve studied Computer Science at Utrecht University and I’m currently helping customers buy their groceries online at Albert Heijn.'); ?> </div>
+			<div class="col-span-5 col-start-8">
+				<span class="font-bold">Skills</span>
+				<div class="grid" style="grid-template-columns: min-content auto;">
+					<div class="mr-4">
+						<div>Java</div>
+						<div>Go</div>
+					</div>
+					<div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 80%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 80%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div id="experience" class="section">
-		<h1>Experience</h1>
+		<h1><span>Experience</span></h1>
 		<div>
 			<?php
 			$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
@@ -76,7 +97,7 @@ get_header();
 	</div>
 
 	<div id="contact" class="section">
-		<h1>Contact</h1>
+		<h1><span>Contact</span></h1>
 
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
 

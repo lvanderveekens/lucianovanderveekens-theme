@@ -123,7 +123,7 @@ function theme_get_customizer_css()
 {
 	ob_start();
 
-	$navbar_color = get_theme_mod('lucianovanderveekens_theme_navbar_color', '#073642');
+	$navbar_color = get_theme_mod('lucianovanderveekens_theme_navbar_color', '#ffffff');
 	if (!empty($navbar_color)) {
 ?>
 		nav, footer {
@@ -132,7 +132,7 @@ function theme_get_customizer_css()
 	<?php
 	}
 
-	$background_color = get_theme_mod('lucianovanderveekens_theme_background_color', '#002B36');
+	$background_color = get_theme_mod('lucianovanderveekens_theme_background_color', '#ffffff');
 	if (!empty($background_color)) {
 	?>
 		body {
@@ -147,20 +147,23 @@ function theme_get_customizer_css()
 	<?php
 	}
 
-	$accent_color = get_theme_mod('lucianovanderveekens_theme_accent_color', '#CB4B16');
+	$accent_color = get_theme_mod('lucianovanderveekens_theme_accent_color', '#FF0000');
 	if (!empty($accent_color)) {
 	?>
-		.section > h1 {
-		color: <?php echo $accent_color; ?>;
+		.section > h1 > span {
+			border-bottom: 4px solid <?php echo $accent_color; ?>;
+			padding-bottom: 8px;
 		}
 
 		.accent-text {
-		color: <?php echo $accent_color; ?>;
+			color: <?php echo $accent_color; ?>;
 		}
 
 		.cta {
-		color: <?php echo $accent_color; ?>;
-		border-color: <?php echo $accent_color; ?>;
+			color: <?php echo $accent_color; ?>;
+			border-color: <?php echo $accent_color; ?>;
+			border: 4px solid;
+			border-radius: 10px;
 		}
 
 		@media (hover: hover) {
@@ -170,18 +173,18 @@ function theme_get_customizer_css()
 		}
 
 		.menu-container-desktop > ul > li > a:hover {
-		color: <?php echo $accent_color; ?>;
+			color: <?php echo $accent_color; ?>;
 		}
 
 		a.text-link {
-		color: <?php echo $accent_color; ?>;
-		border-bottom: 1px solid <?php echo $accent_color; ?>;
+			color: <?php echo $accent_color; ?>;
+			border-bottom: 1px solid <?php echo $accent_color; ?>;
 		}
 
 	<?php
 	}
 
-	$text_color = get_theme_mod('lucianovanderveekens_theme_text_color', '#839496');
+	$text_color = get_theme_mod('lucianovanderveekens_theme_text_color', '#000000');
 	if (!empty($text_color)) {
 	?>
 		body {
@@ -205,7 +208,7 @@ function lucianovanderveekens_theme_scripts()
 	$custom_css = theme_get_customizer_css();
 	wp_add_inline_style('tailwindcss', $custom_css);
 
-	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Satisfy&display=swap', false);
+	wp_enqueue_style('google-fonts-raleway', 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap', false);
 
 	wp_enqueue_script('lucianovanderveekens-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true);
 
@@ -522,3 +525,8 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function liveReload(){
+	echo '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] +\':35729/livereload.js?snipver=1"></\' + \'script>\')</script>';
+}
+add_action('wp_footer', 'liveReload', 100);

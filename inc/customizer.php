@@ -40,7 +40,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 	$wp_customize->remove_section('background_image');
 	$wp_customize->remove_section('static_front_page');
 
-	// remove_theme_mod('lucianovanderveekens_theme_hero_image');
+	// remove_theme_mod('lucianovanderveekens_theme_background_color');
 
 	$wp_customize->add_section('lucianovanderveekens_theme_colors', array(
 		'title'    => 'Colors',
@@ -56,7 +56,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'settings' => 'lucianovanderveekens_theme_navbar_color',
 	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_background_color', array(
-		'default'   => '#002B36',
+		'default'   => '#ffffff',
 		'transport' => 'refresh',
 	));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_background_color', array(
@@ -65,7 +65,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'settings' => 'lucianovanderveekens_theme_background_color',
 	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_accent_color', array(
-		'default'   => '#CB4B16',
+		'default'   => '#FF0000',
 		'transport' => 'refresh',
 	));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_accent_color', array(
@@ -74,7 +74,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'settings' => 'lucianovanderveekens_theme_accent_color',
 	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_text_color', array(
-		'default'   => '#839496',
+		'default'   => '#000000',
 		'transport' => 'refresh',
 	));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_text_color', array(
@@ -121,15 +121,6 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'title'    => 'About',
 		'priority' => 50,
 	));
-	$wp_customize->add_setting('lucianovanderveekens_theme_about_image', array(
-		'default'           => get_template_directory_uri() . '/images/luciano4.jpeg',
-		'sanitize_callback' => 'esc_url_raw'
-	));
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'lucianovanderveekens_theme_about_image', array(
-		'label'    => 'About image',
-		'section'  => 'lucianovanderveekens_theme_about',
-		'settings' => 'lucianovanderveekens_theme_about_image'
-	)));
 
 	$wp_customize->add_section('lucianovanderveekens_theme_contact', array(
 		'title'    => 'Contact',

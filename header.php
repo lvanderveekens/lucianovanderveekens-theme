@@ -45,7 +45,7 @@
 			<nav id="site-navigation" class="main-navigation px-4">
 				<div class="flex justify-between items-center">
 					<div class="site-branding">
-						<h1 class="accent-text site-title font-['Satisfy'] font-bold py-7 text-2xl md:text-4xl lg:text-5xl">
+						<h1 class="site-title font-bold py-7 md:text-xl lg:text-2xl">
 							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 						</h1>
 					</div>
@@ -62,14 +62,13 @@
 
 			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
 				<div class="mb-12 md:mb-0 md:col-span-8">
-					<h2 class="text-3xl font-bold mb-2">Hi, my name is</h2>
-					<h1 class="text-4xl font-extrabold mb-6"><span class="accent-text"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens'); ?></span>.</h1>
-					<h3 class="text-2xl mb-6"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a software engineer specializing in architecting, creating, testing and maintaining back-end applications.'); ?></h3>
-					<a class="cta px-6 py-4" href="#contact">Contact Me</a>
+					<h2 class="text-4xl font-bold mb-7">Hi, I'm <?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens');?>.</h2>
+					<h3 class="text-2xl mb-12"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a freelance software engineer'); ?></h3>
+					<a class="cta px-6 py-4" href="#contact">Get in touch</a>
 				</div>
-				<div class="w-2/3 md:w-full mx-auto md:col-span-3 md:col-start-10">
+				<div class="w-2/3 md:w-full mx-auto md:col-span-4 md:col-start-9">
 					<div class="aspect-ratio-box">
-						<img class="object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image', get_template_directory_uri() . '/images/luciano3.jpeg') ?>" alt="Hero image">
+						<img class="object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image', get_template_directory_uri() . '/images/luciano1.jpeg') ?>" alt="Hero image">
 					</div>
 				</div>
 			</div>

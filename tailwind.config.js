@@ -4,7 +4,7 @@ module.exports = {
 	content: [],
 	theme: {
 		fontFamily: {
-			sans: [ 'Open Sans', 'sans-serif' ],
+			sans: [ 'Raleway', 'sans-serif' ],
 		},
 		screens: {
 			sm: '640px',
