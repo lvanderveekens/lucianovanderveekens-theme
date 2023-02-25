@@ -115,6 +115,43 @@
     @apply font-bold;
     @apply inline-block;
   }
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+  }
+
+  .selected .dot {
+    background-color: black;
+  }
+
+  .experience {
+    display: none;
+  }
+
+  /* .experience-name span {
+    margin-right: 4px;
+  }
+  .experience-name span:hover {
+    font-weight: bold;
+  } */
+
+  .experience.selected {
+    display: block;
+  }
+
+  .experience-name.selected {
+    font-weight: bold;
+  }
+
+  .line {
+    width: 2px; 
+    height: 40px; 
+    background-color: #D9D9D9; 
+    margin: 0 9px;
+  }
 }
 
 @tailwind utilities;

@@ -24,15 +24,22 @@ get_header();
 			<div class="col-span-5">
 				<div class="font-bold">Who?</div>
 				<div class="whitespace-pre-line">
-					<?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I\'ve studied Computer Science at Utrecht University and I\'m currently helping customers buy their groceries online at Albert Heijn.'); ?> 
+					<?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I\'ve studied Computer Science at Utrecht University and I\'m currently helping customers buy their groceries online at Albert Heijn.'); ?>
 				</div>
 			</div>
 			<div class="col-span-5 col-start-8">
-				<span class="font-bold">Skills</span>
+				<div class="font-bold mb-7">Skills</div>
 				<div class="grid" style="grid-template-columns: min-content auto;">
-					<div class="mr-4">
+					<div class="mr-4 whitespace-nowrap">
 						<div>Java</div>
+						<div>Kotlin</div>
+						<div>Spring Boot</div>
 						<div>Go</div>
+						<div>Docker</div>
+						<div>Kubernetes</div>
+						<div>Postgres</div>
+						<div>MongoDB</div>
+						<div>Kafka</div>
 					</div>
 					<div>
 						<div class="flex items-center" style="padding: 9px 0;">
@@ -45,6 +52,41 @@ get_header();
 								<div class="bg-black h-full" style="width: 80%;"></div>
 							</div>
 						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 80%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 50%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 70%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 70%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 60%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 60%;"></div>
+							</div>
+						</div>
+						<div class="flex items-center" style="padding: 9px 0;">
+							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="bg-black h-full" style="width: 50%;"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -53,46 +95,99 @@ get_header();
 
 	<div id="experience" class="section">
 		<h1><span>Experience</span></h1>
-		<div>
-			<?php
-			$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
-			?>
-			<?php if ($the_query->have_posts()) : ?>
+		<div class="grid grid-cols-12 gap-x-4">
+			<div class="col-span-3 flex">
+				<div style="margin-top: 4px; margin-right: 2.5rem;">
+					<?php $the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order')); ?>
+					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+						<?php $index = $the_query->current_post ?>
+						<?php $is_last_post = $index + 1 == $the_query->post_count ?>
+
+						<div class="hover:cursor-pointer" onclick="selectExperience(<?php echo $index; ?>)" data-experience-index="<?php echo $index; ?>">
+							<div class="dot"></div>
+						</div>
+						<?php if (!$is_last_post) { ?>
+							<div class="line"></div>
+						<?php } ?>
+
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+				</div>
+				<div class="shrink-0">
+					<?php $the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order')); ?>
+					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+						<?php $index = $the_query->current_post ?>
+						<?php $is_last_post = $index + 1 == $the_query->post_count ?>
+
+						<div class="experience-name hover:cursor-pointer" style="<?php echo (!$is_last_post ? 'margin-bottom: 32px;' : ''); ?>" onclick="selectExperience(<?php echo $index; ?>)" data-experience-index="<?php echo $index; ?>">
+							<span class="">
+								<?php the_field('employer-name'); ?>
+							</span>
+						</div>
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+				</div>
+			</div>
+			<div class="col-start-4 col-span-9 ml-14">
+				<?php
+				$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
+				?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-					<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
-						<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
-							<div class="flex items-center shrink-0 w-1/4 md:w-2/5 my-auto mr-6 md:ml-10 md:mb-8">
+					<div class="experience" data-experience-index="<?php echo $the_query->current_post; ?>">
+						<div class="flex">
+							<div class="shrink-0 mr-8" style="width: 75px;">
 								<div class="aspect-ratio-box">
 									<?php $image_id = get_field('employer-image'); ?>
 									<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 									<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
-
 									<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 								</div>
 							</div>
+
+							<div class="">
+								<div>
+									<div>
+										<?php the_field('role'); ?> <span class="font-bold">@ <?php the_field('employer-name'); ?></span>
+									</div>
+									<div>
+										<?php the_field('when'); ?>
+									</div>
+									<div>
+										<?php the_field('location'); ?>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="whitespace-pre-line"><?php the_field('summary'); ?></div>
+						<div class="whitespace-pre" style="color: #00000060;"><?php the_field('technologies'); ?></div>
+					</div>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
+			</div>
+
+			<?php
+			$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
+			?>
+			<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+
+				<!-- <div>
+					<?php the_field('employer-name'); ?>
+				</div> -->
+
+				<!-- <div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
+						<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
 							<div>
-								<span class="font-bold"><?php the_field('role'); ?></span><br>
-								<?php the_field('employer-name'); ?><br>
-								<?php the_field('when'); ?><br>
-								<?php the_field('location'); ?><br>
 							</div>
 						</div>
 						<div class="md:col-span-8 md:col-start-5 lg:col-span-9 lg:col-start-4">
-							<?php the_field('summary'); ?>
 						</div>
-					</div>
+					</div> -->
 
-					<?php
-					if ($the_query->current_post + 1 != $the_query->post_count) { ?>
-						<!-- this is not the last post -->
-						<hr class="text-base0">
-					<?php } ?>
-
-				<?php endwhile;
-				wp_reset_postdata(); ?>
-			<?php else : ?>
-				<p><?php _e('No experience found! Add them in the WP Admin Dashboard.'); ?></p>
-			<?php endif; ?>
+			<?php endwhile;
+			wp_reset_postdata(); ?>
 		</div>
 	</div>
 
