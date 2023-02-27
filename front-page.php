@@ -166,28 +166,12 @@ get_header();
 				<?php endwhile;
 				wp_reset_postdata(); ?>
 			</div>
+		</div>
+	</div>
 
-			<?php
-			$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
-			?>
-			<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-
-				<!-- <div>
-					<?php the_field('employer-name'); ?>
-				</div> -->
-
-				<!-- <div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 my-12 md:my-20">
-						<div class="md:col-span-4 lg:col-span-3 mb-6 md:mb-0 flex md:block">
-							<div>
-							</div>
-						</div>
-						<div class="md:col-span-8 md:col-start-5 lg:col-span-9 lg:col-start-4">
-						</div>
-					</div> -->
-
-			<?php endwhile;
-			wp_reset_postdata(); ?>
+	<div id="projects" class="section">
+		<h1><span>Projects</span></h1>
+		<div class="grid grid-cols-12 gap-x-4">
 		</div>
 	</div>
 
