@@ -30,18 +30,18 @@ get_header();
 			<div class="col-span-5 col-start-8">
 				<div class="font-bold mb-7">Skills</div>
 				<div class="grid" style="grid-template-columns: min-content auto;">
-					<div class="mr-4 whitespace-nowrap">
-						<div>Java</div>
-						<div>Kotlin</div>
-						<div>Spring Boot</div>
-						<div>Go</div>
-						<div>Docker</div>
-						<div>Kubernetes</div>
-						<div>Postgres</div>
-						<div>MongoDB</div>
-						<div>Kafka</div>
-					</div>
-					<div>
+                    <div class="mr-4 whitespace-nowrap">
+                        <div>Java</div>
+                        <div>Kotlin</div>
+                        <div>Spring Boot</div>
+                        <div>Go</div>
+                        <div>Docker</div>
+                        <div>Kubernetes</div>
+                        <div>Postgres</div>
+                        <div>MongoDB</div>
+                        <div>Kafka</div>
+                    </div>
+                    <div>
 						<div class="flex items-center" style="padding: 9px 0;">
 							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
 								<div class="bg-black h-full" style="width: 80%;"></div>
@@ -96,7 +96,7 @@ get_header();
 	<div id="experience" class="section">
 		<h1><span>Experience</span></h1>
 		<div class="grid grid-cols-12 gap-x-4">
-			<div class="col-span-3 flex">
+			<div class="lg:col-span-4 md:col-span-5 flex">
 				<div style="margin-top: 4px; margin-right: 2.5rem;">
 					<?php $the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order')); ?>
 					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -113,7 +113,7 @@ get_header();
 					<?php endwhile;
 					wp_reset_postdata(); ?>
 				</div>
-				<div class="shrink-0">
+				<div class="">
 					<?php $the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order')); ?>
 					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<?php $index = $the_query->current_post ?>
@@ -128,7 +128,7 @@ get_header();
 					wp_reset_postdata(); ?>
 				</div>
 			</div>
-			<div class="col-start-4 col-span-9 ml-14">
+			<div class="lg:col-start-5 lg:col-span-8 md:col-start-6 md:col-span-7">
 				<?php
 				$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
 				?>
@@ -161,7 +161,7 @@ get_header();
 						</div>
 						<br>
 						<div class="whitespace-pre-line"><?php the_field('summary'); ?></div>
-						<div class="whitespace-pre" style="color: #00000060;"><?php the_field('technologies'); ?></div>
+						<div class="whitespace-pre-wrap" style="color: #00000060;"><?php the_field('technologies'); ?></div>
 					</div>
 				<?php endwhile;
 				wp_reset_postdata(); ?>

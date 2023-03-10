@@ -131,13 +131,6 @@
     display: none;
   }
 
-  /* .experience-name span {
-    margin-right: 4px;
-  }
-  .experience-name span:hover {
-    font-weight: bold;
-  } */
-
   .experience.selected {
     display: block;
   }
