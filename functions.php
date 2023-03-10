@@ -160,9 +160,7 @@ function theme_get_customizer_css()
 		}
 
 		.cta {
-			color: <?php echo $accent_color; ?>;
-			border-color: <?php echo $accent_color; ?>;
-			border: 4px solid;
+			border: 4px solid <?php echo $accent_color; ?>;
 			border-radius: 10px;
 		}
 
@@ -170,6 +168,10 @@ function theme_get_customizer_css()
 			.cta:hover {
 				background-color: <?php echo $accent_color; ?>;
 			}
+		}
+
+		.site-title a:hover {
+			color: <?php echo $accent_color; ?>;
 		}
 
 		.menu-container-desktop > ul > li > a:hover {

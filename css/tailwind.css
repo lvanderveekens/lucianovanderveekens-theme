@@ -52,6 +52,12 @@
     @apply lg:mb-32;
   }
 
+  .project {
+    @apply mb-12;
+    @apply md:mb-20;
+    @apply lg:mb-32;
+  }
+
   .social-logo {
     @apply aspect-square;
 
