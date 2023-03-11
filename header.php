@@ -61,7 +61,7 @@
 			</nav>
 
 			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
-				<div class="mb-12 md:mb-0 md:col-span-8">
+				<div class="hero-text md:col-span-8">
 					<h2 class="text-4xl font-bold mb-7">Hi, I'm <?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens');?>.</h2>
 					<h3 class="text-2xl mb-12"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a freelance software engineer'); ?></h3>
 					<a class="cta px-6 py-4" href="#contact">Get in touch</a>

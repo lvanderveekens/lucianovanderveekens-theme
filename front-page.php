@@ -20,14 +20,14 @@ get_header();
 
 	<div id="about" class="section">
 		<h1><span>About</span></h1>
-		<div class="grid grid-cols-12 gap-x-4">
-			<div class="col-span-5">
+		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4">
+			<div class="mb-20 md:col-span-5">
 				<div class="font-bold">Who?</div>
 				<div class="whitespace-pre-line">
 					<?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I\'ve studied Computer Science at Utrecht University and I\'m currently helping customers buy their groceries online at Albert Heijn.'); ?>
 				</div>
 			</div>
-			<div class="col-span-5 col-start-8">
+			<div class="md:col-span-5 md:col-start-8">
 				<div class="font-bold mb-7">Skills</div>
 				<div class="grid" style="grid-template-columns: min-content auto;">
 					<div class="mr-4 whitespace-nowrap">
@@ -95,8 +95,8 @@ get_header();
 
 	<div id="experience" class="section">
 		<h1><span>Experience</span></h1>
-		<div class="grid grid-cols-12 gap-x-4">
-			<div class="lg:col-span-4 md:col-span-5 flex">
+		<div class="grid gap-x-4 grid-cols-1 md:grid-cols-12">
+			<div class="mb-20 md:mb-0 flex md:col-span-5 lg:col-span-4">
 				<div style="margin-top: 4px; margin-right: 2.5rem;">
 					<?php $the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order')); ?>
 					<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -128,7 +128,7 @@ get_header();
 					wp_reset_postdata(); ?>
 				</div>
 			</div>
-			<div class="lg:col-start-5 lg:col-span-8 md:col-start-6 md:col-span-7">
+			<div class="md:col-start-6 md:col-span-7 lg:col-start-5 lg:col-span-8">
 				<?php
 				$the_query = new WP_Query(array('post_type' => 'experience', 'orderby' => 'menu_order'));
 				?>
@@ -178,8 +178,8 @@ get_header();
 			<?php $index = $the_query->current_post ?>
 			<?php $is_even_index = $index % 2 == 0 ?>
 
-			<div class="project grid grid-cols-12 gap-x-4 grid-flow-dense">
-				<div class="<?php echo $is_even_index ? 'col-span-5' : 'col-start-7 col-span-6' ?>">
+			<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense">
+				<div class="mb-20 md:mb-0 <?php echo $is_even_index ? 'md:col-span-5' : 'md:col-start-7 md:col-span-6' ?>">
 					<div class="text-2xl font-bold">
 						<?php echo get_the_title(); ?>
 					</div>
@@ -207,7 +207,7 @@ get_header();
 						</div>
 					<?php endif ?>
 				</div>
-				<div class="flex <?php echo $is_even_index ? 'col-start-7 col-span-6' : 'col-span-5' ?>">
+				<div class="flex <?php echo $is_even_index ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5' ?>">
 					<div class="w-full">
 						<?php $image_id = get_field('image_1'); ?>
 						<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
@@ -234,7 +234,7 @@ get_header();
 
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center justify-items-center">
 
-			<div class="md:col-span-6 mb-12 md:mb-0 whitespace-pre-line"><?php echo get_theme_mod('lucianovanderveekens_theme_contact_description', "Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!\n\nI'm available on some of the social networks, but you can also send an email to <a class=\"text-link\" href=\"mailto:lucianovanderveekens@gmail.com\">lucianovanderveekens@gmail.com</a>.\n\nI'll try my best to get back to you."); ?></div>
+			<div class="md:col-span-6 mb-20 md:mb-0 whitespace-pre-line"><?php echo get_theme_mod('lucianovanderveekens_theme_contact_description', "Whether you got some questions or business opportunities for me, or you just want to say hi, don't hesitate to reach out!\n\nI'm available on some of the social networks, but you can also send an email to <a class=\"text-link\" href=\"mailto:lucianovanderveekens@gmail.com\">lucianovanderveekens@gmail.com</a>.\n\nI'll try my best to get back to you."); ?></div>
 
 			<div class="md:col-span-5 md:col-start-8 w-full flex justify-between">
 				<?php
