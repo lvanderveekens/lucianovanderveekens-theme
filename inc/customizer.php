@@ -47,7 +47,7 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'priority' => 30,
 	));
 	$wp_customize->add_setting('lucianovanderveekens_theme_navbar_color', array(
-		'default'   => '#073642',
+		'default'   => '#fff',
 		'transport' => 'refresh',
 	));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_navbar_color', array(

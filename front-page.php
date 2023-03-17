@@ -21,7 +21,7 @@ get_header();
 	<div id="about" class="section">
 		<h1><span>About</span></h1>
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-x-4">
-			<div class="mb-20 md:col-span-5">
+			<div class="mb-20 md:mb-0 md:col-span-5">
 				<div class="font-bold">Who?</div>
 				<div class="whitespace-pre-line">
 					<?php echo get_theme_mod('lucianovanderveekens_theme_about_description', 'Hello! My name is Luciano and I enjoy building complex systems and the challenges that come with it. I\'ve studied Computer Science at Utrecht University and I\'m currently helping customers buy their groceries online at Albert Heijn.'); ?>
