@@ -217,8 +217,9 @@ function lucianovanderveekens_theme_scripts()
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
-	}
+	}	
 }
+
 add_action('wp_enqueue_scripts', 'lucianovanderveekens_theme_scripts');
 
 function register_custom_post_types()
