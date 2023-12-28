@@ -723,7 +723,8 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function liveReload(){
-	echo '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] +\':35729/livereload.js?snipver=1"></\' + \'script>\')</script>';
-}
-add_action('wp_footer', 'liveReload', 100);
+// TODO: do not use in production
+// function liveReload(){
+// 	echo '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] +\':35729/livereload.js?snipver=1"></\' + \'script>\')</script>';
+// }
+// add_action('wp_footer', 'liveReload', 100);
