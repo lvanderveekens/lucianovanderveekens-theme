@@ -93,6 +93,65 @@ get_header();
 		</div>
 	</div>
 
+	<div id="projects" class="section">
+		<h1><span>Projects</span></h1>
+		<?php
+		$the_query = new WP_Query(array('post_type' => 'project', 'orderby' => 'menu_order'));
+		?>
+		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+			<?php $index = $the_query->current_post ?>
+			<?php $is_even_index = $index % 2 == 0 ?>
+
+			<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense">
+				<div class="mb-20 md:mb-0 <?php echo $is_even_index ? 'md:col-span-5' : 'md:col-start-7 md:col-span-6' ?>">
+					<div class="text-2xl font-bold">
+						<?php echo get_the_title(); ?>
+					</div>
+					<div class="whitespace-pre-line">
+						<?php the_field('description'); ?>
+					</div>
+					<div class="whitespace-pre-wrap" style="color: #00000060;"><br><?php the_field('technologies'); ?></div>
+					<?php if (get_field('github_link') || get_field('app_store_link')) : ?>
+						<br>
+						<div class="flex">
+							<?php if (get_field('app_store_link')) : ?>
+								<div class="mr-4">
+									<a href="<?php the_field('app_store_link') ?>" target="_blank">
+										<img style="height: 46px;" src="<?php echo get_template_directory_uri(); ?>/images/app-store-badge.svg" alt="App Store badge">
+									</a>
+								</div>
+							<?php endif ?>
+							<?php if (get_field('github_link')) : ?>
+								<div>
+									<a href="<?php the_field('github_link') ?>" target="_blank">
+										<img style="height: 46px;" src="<?php echo get_template_directory_uri(); ?>/images/github-icon.svg" alt="GitHub icon">
+									</a>
+								</div>
+							<?php endif ?>
+						</div>
+					<?php endif ?>
+				</div>
+				<div class="flex <?php echo $is_even_index ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5' ?>">
+					<div class="w-full">
+						<?php $image_id = get_field('image_1'); ?>
+						<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
+						<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+						<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+					</div>
+					<?php if (get_field('image_2')) : ?>
+						<div class="ml-4 w-full">
+							<?php $image_id = get_field('image_2'); ?>
+							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
+							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+							<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+						</div>
+					<?php endif ?>
+				</div>
+			</div>
+		<?php endwhile;
+		wp_reset_postdata(); ?>
+	</div>
+
 	<div id="experience" class="section">
 		<h1><span>Experience</span></h1>
 		<div class="grid gap-x-4 grid-cols-1 md:grid-cols-12">
@@ -167,66 +226,6 @@ get_header();
 				wp_reset_postdata(); ?>
 			</div>
 		</div>
-	</div>
-
-	<div id="projects" class="section">
-		<h1><span>Projects</span></h1>
-		<?php
-		$the_query = new WP_Query(array('post_type' => 'project', 'orderby' => 'menu_order'));
-		?>
-		<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-			<?php $index = $the_query->current_post ?>
-			<?php $is_even_index = $index % 2 == 0 ?>
-
-			<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense">
-				<div class="mb-20 md:mb-0 <?php echo $is_even_index ? 'md:col-span-5' : 'md:col-start-7 md:col-span-6' ?>">
-					<div class="text-2xl font-bold">
-						<?php echo get_the_title(); ?>
-					</div>
-					<div class="whitespace-pre-line">
-						<?php the_field('description'); ?>
-					</div>
-					<div class="whitespace-pre-wrap" style="color: #00000060;"><br><?php the_field('technologies'); ?></div>
-					<?php if (get_field('github_link') || get_field('app_store_link')) : ?>
-						<br>
-						<div class="flex">
-							<?php if (get_field('app_store_link')) : ?>
-								<div class="mr-4">
-									<a href="<?php the_field('app_store_link') ?>" target="_blank">
-										<img style="height: 46px;" src="<?php echo get_template_directory_uri(); ?>/images/app-store-badge.svg" alt="App Store badge">
-									</a>
-								</div>
-							<?php endif ?>
-							<?php if (get_field('github_link')) : ?>
-								<div>
-									<a href="<?php the_field('github_link') ?>" target="_blank">
-										<img style="height: 46px;" src="<?php echo get_template_directory_uri(); ?>/images/github-icon.svg" alt="GitHub icon">
-									</a>
-								</div>
-							<?php endif ?>
-						</div>
-					<?php endif ?>
-				</div>
-				<div class="flex <?php echo $is_even_index ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5' ?>">
-					<div class="w-full">
-						<?php $image_id = get_field('image_1'); ?>
-						<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
-						<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
-						<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
-					</div>
-					<?php if (get_field('image_2')) : ?>
-						<div class="ml-4 w-full">
-							<?php $image_id = get_field('image_2'); ?>
-							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
-							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
-							<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
-						</div>
-					<?php endif ?>
-				</div>
-			</div>
-		<?php endwhile;
-		wp_reset_postdata(); ?>
-	</div>
 	</div>
 
 	<div id="contact" class="section">
