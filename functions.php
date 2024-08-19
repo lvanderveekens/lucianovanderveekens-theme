@@ -205,6 +205,7 @@ function theme_get_customizer_css()
  */
 function lucianovanderveekens_theme_scripts()
 {
+	wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.css', array(), filemtime(get_template_directory() . '/css/lightbox.css'), 'all');
 	wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/css/tailwind.prod.css', array(), filemtime(get_template_directory() . '/css/tailwind.prod.css'), 'all');
 
 	$custom_css = theme_get_customizer_css();
@@ -212,6 +213,7 @@ function lucianovanderveekens_theme_scripts()
 
 	wp_enqueue_style('google-fonts-raleway', 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap', false);
 
+	wp_enqueue_script('lucianovanderveekens-theme-lightbox-js', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('lucianovanderveekens-theme-app-js', get_template_directory_uri() . '/js/app.js', array('jquery'), _S_VERSION, true);
 	wp_enqueue_script('lucianovanderveekens-theme-navigation-js', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true);
 

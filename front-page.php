@@ -136,14 +136,20 @@ get_header();
 						<?php $image_id = get_field('image_1'); ?>
 						<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 						<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
-						<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+
+						<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-1-<?php echo $image_id ?>">
+							<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+						</a>
 					</div>
 					<?php if (get_field('image_2')) : ?>
 						<div class="ml-4 w-full">
 							<?php $image_id = get_field('image_2'); ?>
 							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
-							<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+
+							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-2-<?php echo $image_id ?>">
+								<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+							</a>
 						</div>
 					<?php endif ?>
 				</div>
