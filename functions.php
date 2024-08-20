@@ -147,40 +147,49 @@ function theme_get_customizer_css()
 	<?php
 	}
 
-	$accent_color = get_theme_mod('lucianovanderveekens_theme_accent_color', '#FF0000');
-	if (!empty($accent_color)) {
+	$primary_color = get_theme_mod('lucianovanderveekens_theme_primary_color', '#FF1900');
+	$accent_color = get_theme_mod('lucianovanderveekens_theme_accent_color', '#00D5ED');
+	if (!empty($primary_color) && !empty($accent_color)) {
 	?>
 		.section > h1 > span {
-			border-bottom: 4px solid <?php echo $accent_color; ?>;
+			border-bottom: 4px solid <?php echo $primary_color; ?>;
 			padding-bottom: 8px;
 		}
 
 		.accent-text {
-			color: <?php echo $accent_color; ?>;
+			color: <?php echo $primary_color; ?>;
+		}
+
+		.hero-name {
+			background: linear-gradient(135deg, <?php echo $primary_color ?>, <?php echo $accent_color ?>);
+			background-size: 100%;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
 		}
 
 		.cta {
-			border: 4px solid <?php echo $accent_color; ?>;
+			border: 4px solid <?php echo $primary_color; ?>;
 			border-radius: 10px;
 		}
 
 		@media (hover: hover) {
 			.cta:hover {
-				background-color: <?php echo $accent_color; ?>;
+				background-color: <?php echo $primary_color; ?>;
 			}
 		}
 
 		.site-title a:hover {
-			color: <?php echo $accent_color; ?>;
+			color: <?php echo $primary_color; ?>;
 		}
 
 		.menu-container-desktop > ul > li > a:hover {
-			color: <?php echo $accent_color; ?>;
+			color: <?php echo $primary_color; ?>;
 		}
 
 		a.text-link {
-			color: <?php echo $accent_color; ?>;
-			border-bottom: 1px solid <?php echo $accent_color; ?>;
+			color: <?php echo $primary_color; ?>;
+			border-bottom: 1px solid <?php echo $primary_color; ?>;
 		}
 
 	<?php

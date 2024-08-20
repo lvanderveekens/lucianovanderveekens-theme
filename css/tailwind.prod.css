@@ -951,6 +951,22 @@ a.text-link {
   white-space: pre-wrap;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
 .border {
   border-width: 1px;
 }

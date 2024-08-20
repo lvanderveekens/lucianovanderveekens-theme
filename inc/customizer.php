@@ -40,7 +40,8 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 	$wp_customize->remove_section('background_image');
 	$wp_customize->remove_section('static_front_page');
 
-	// remove_theme_mod('lucianovanderveekens_theme_background_color');
+	// remove_theme_mod('lucianovanderveekens_theme_primary_color');
+	// remove_theme_mod('lucianovanderveekens_theme_accent_color');
 
 	$wp_customize->add_section('lucianovanderveekens_theme_colors', array(
 		'title'    => 'Colors',
@@ -64,8 +65,17 @@ function lucianovanderveekens_theme_customize_register($wp_customize)
 		'section'  => 'lucianovanderveekens_theme_colors',
 		'settings' => 'lucianovanderveekens_theme_background_color',
 	)));
+	$wp_customize->add_setting('lucianovanderveekens_theme_primary_color', array(
+		'default'   => '#FF1900',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_primary_color', array(
+		'label'    => 'Primary color',
+		'section'  => 'lucianovanderveekens_theme_colors',
+		'settings' => 'lucianovanderveekens_theme_primary_color',
+	)));
 	$wp_customize->add_setting('lucianovanderveekens_theme_accent_color', array(
-		'default'   => '#FF0000',
+		'default'   => '#47FFFF',
 		'transport' => 'refresh',
 	));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lucianovanderveekens_theme_accent_color', array(
