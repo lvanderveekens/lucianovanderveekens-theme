@@ -44,48 +44,48 @@ get_header();
 					<div>
 						<?php $primary_color = get_theme_mod('lucianovanderveekens_theme_primary_color', '#FF1900'); ?>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 80%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 50%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 50%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 70%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 70%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 70%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 70%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 60%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 60%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 60%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 60%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 						<div class="flex items-center" style="padding: 9px 0;">
-							<div class="inline-block w-full h-2.5" style="background-color: #D9D9D9;">
-								<div class="h-full" style="width: 50%; background-color: <?php echo $primary_color ?>"></div>
+							<div class="rounded inline-block w-full h-2.5" style="background-color: #D9D9D9;">
+								<div class="rounded h-full" style="width: 50%; background-color: <?php echo $primary_color ?>"></div>
 							</div>
 						</div>
 					</div>
