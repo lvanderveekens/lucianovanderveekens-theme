@@ -42,8 +42,8 @@
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
 
-			<nav id="site-navigation" class="main-navigation px-4">
-				<div class="flex justify-between items-center">
+			<nav id="site-navigation" class="main-navigation">
+				<div class="flex justify-between items-center px-4">
 					<div class="site-branding">
 						<h1 class="site-title font-bold py-7 md:text-xl lg:text-2xl">
 							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
@@ -57,7 +57,9 @@
 					</div>
 				</div>
 
-				<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
+				<div class="bg-gray-100 px-4">
+					<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
+				</div>
 			</nav>
 
 			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
