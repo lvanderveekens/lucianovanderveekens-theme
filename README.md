@@ -2,7 +2,8 @@
 
 Go to https://lucianovanderveekens.com.
 
-![image](https://github.com/lvanderveekens/lucianovanderveekens-theme/assets/6907423/462619cf-2728-40a3-b303-0266159e1079)
+<img width="1635" alt="Screenshot 2024-08-23 at 11 55 35" src="https://github.com/user-attachments/assets/06a7d972-9008-4dbc-864d-bc2cbc328292">
+<img width="1635" alt="Screenshot 2024-08-23 at 11 55 43" src="https://github.com/user-attachments/assets/c5e7bdef-4857-45d2-b96f-8d6bb471b08f">
 
 
 ## Versions
