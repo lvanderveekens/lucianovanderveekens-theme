@@ -132,7 +132,7 @@ get_header();
 						</div>
 					<?php endif ?>
 				</div>
-				<div class="flex <?php echo $is_even_index ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5' ?>">
+				<div class="grid grid-cols-2 gap-4 <?php echo $is_even_index ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5' ?>">
 					<div class="w-full">
 						<?php $image_id = get_field('image_1'); ?>
 						<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
@@ -143,12 +143,34 @@ get_header();
 						</a>
 					</div>
 					<?php if (get_field('image_2')) : ?>
-						<div class="ml-4 w-full">
+						<div class="w-full">
 							<?php $image_id = get_field('image_2'); ?>
 							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
 
 							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-2-<?php echo $image_id ?>">
+								<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+							</a>
+						</div>
+					<?php endif ?>
+					<?php if (get_field('image_3')) : ?>
+						<div class="w-full">
+							<?php $image_id = get_field('image_3'); ?>
+							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
+							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+
+							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-3-<?php echo $image_id ?>">
+								<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+							</a>
+						</div>
+					<?php endif ?>
+					<?php if (get_field('image_4')) : ?>
+						<div class="w-full">
+							<?php $image_id = get_field('image_4'); ?>
+							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
+							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
+
+							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-4-<?php echo $image_id ?>">
 								<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 							</a>
 						</div>
