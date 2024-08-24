@@ -103,7 +103,7 @@ get_header();
 			<?php $index = $the_query->current_post ?>
 			<?php $is_even_index = $index % 2 == 0 ?>
 
-			<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense">
+			<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense items-center">
 				<div class="mb-20 md:mb-0 <?php echo $is_even_index ? 'md:col-span-5' : 'md:col-start-7 md:col-span-6' ?>">
 					<div class="text-2xl font-bold">
 						<?php echo get_the_title(); ?>
