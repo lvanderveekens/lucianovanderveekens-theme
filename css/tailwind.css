@@ -43,8 +43,8 @@
     @apply mx-auto;
     @apply md:text-xl;
 
-    @apply my-24; /* 96px */
-    @apply md:my-52; /* 208px */
+    @apply my-12; 
+    @apply md:my-32; 
   }
 
   .section > h1 {

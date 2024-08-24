@@ -12,7 +12,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer lg:mt-36 text-center text-sm py-8">
+<footer id="colophon" class="site-footer text-center text-sm py-8">
 	<p><?php echo get_theme_mod('lucianovanderveekens_theme_footer_text', 'Designed and built by Luciano van der Veekens'); ?></p>
 </footer><!-- #colophon -->
 

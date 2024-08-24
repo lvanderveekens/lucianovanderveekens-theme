@@ -57,20 +57,22 @@
 					</div>
 				</div>
 
-				<div class="bg-gray-100 px-4">
+				<div class="px-4">
 					<?php wp_nav_menu(array('theme_location'  => 'menu-1', 'container_class' => 'menu-container-mobile')); ?>
 				</div>
 			</nav>
 
-			<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
-				<div class="hero-text md:col-span-8">
-					<h2 class="text-4xl font-bold mb-7">Hi, I'm <span class="hero-name"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens');?></span> 👋🏻.</h2>
-					<h3 class="text-2xl mb-12"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a freelance software engineer.'); ?></h3>
-					<a class="cta px-6 py-4" href="#contact">Get in touch</a>
-				</div>
-				<div class="w-2/3 md:w-full mx-auto md:col-span-4 md:col-start-9">
-					<div class="aspect-ratio-box">
-						<img class="rounded-[10px] object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image', get_template_directory_uri() . '/images/luciano1.jpeg') ?>" alt="Hero image">
+			<div class="bg-gray-50 w-full inline-block">
+				<div id="hero" class="section grid grid-cols-1 md:grid-cols-12 gap-x-4 items-center">
+					<div class="hero-text md:col-span-8">
+						<h2 class="text-4xl font-bold mb-7">Hi, I'm <span class="hero-name"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_name', 'Luciano van der Veekens');?></span> 👋🏻.</h2>
+						<h3 class="text-2xl mb-12"><?php echo get_theme_mod('lucianovanderveekens_theme_hero_description', 'I\'m a freelance software engineer.'); ?></h3>
+						<a class="cta px-6 py-4" href="#contact">Get in touch</a>
+					</div>
+					<div class="w-2/3 md:w-full mx-auto md:col-span-4 md:col-start-9">
+						<div class="aspect-ratio-box">
+							<img class="rounded-[10px] object-cover" src="<?php echo get_theme_mod('lucianovanderveekens_theme_hero_image', get_template_directory_uri() . '/images/luciano1.jpeg') ?>" alt="Hero image">
+						</div>
 					</div>
 				</div>
 			</div>
