@@ -104,6 +104,7 @@ get_header();
 			?>
 			<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<?php $index = $the_query->current_post ?>
+				<?php $project_id = $the_query->post->ID ?>
 				<?php $is_even_index = $index % 2 == 0 ?>
 
 				<div class="project grid grid-cols-1 md:grid-cols-12 gap-x-4 grid-flow-dense items-center">
@@ -141,7 +142,7 @@ get_header();
 							<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 							<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
 
-							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-1-<?php echo $image_id ?>">
+							<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="project-<?php echo $project_id ?>">
 								<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 							</a>
 						</div>
@@ -151,7 +152,7 @@ get_header();
 								<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 								<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
 
-								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-2-<?php echo $image_id ?>">
+								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="project-<?php echo $project_id ?>">
 									<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 								</a>
 							</div>
@@ -162,7 +163,7 @@ get_header();
 								<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 								<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
 
-								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-3-<?php echo $image_id ?>">
+								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="project-<?php echo $project_id ?>">
 									<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 								</a>
 							</div>
@@ -173,7 +174,7 @@ get_header();
 								<?php $image = wp_get_attachment_image_src($image_id, 'full'); ?>
 								<?php $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); ?>
 
-								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="image-4-<?php echo $image_id ?>">
+								<a class="w-full" href="<?php echo $image[0]; ?>" data-lightbox="project-<?php echo $project_id ?>">
 									<img class="w-full" src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 								</a>
 							</div>
