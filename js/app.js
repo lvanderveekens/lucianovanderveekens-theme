@@ -1,6 +1,12 @@
 (function ($) {
   selectExperience(0);
   console.log("app.js LOADED");
+
+  lightbox.option({
+    'resizeDuration': 0,
+    'imageFadeDuration': 0,
+    'fadeDuration': 300,
+  })
 })(jQuery);
 
 function selectExperience(index) {
