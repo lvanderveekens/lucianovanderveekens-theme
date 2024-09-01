@@ -34,8 +34,8 @@
   }
 
   .hero-text {
-    @apply mb-20; /* 80px */
-    @apply md:mb-0; /* 0px */
+    @apply mb-20; 
+    @apply md:mb-0; 
   }
 
   .section {
@@ -51,13 +51,13 @@
     @apply text-4xl;
     @apply font-bold;
 
-    @apply mb-20; /* 80px */
-    @apply md:mb-32; /* 128px */
+    @apply mb-12; 
+    @apply md:mb-32; 
   }
 
   .project {
-    @apply mb-20; /* 80px */
-    @apply md:mb-32; /* 128px */
+    @apply mb-12; 
+    @apply md:mb-32; 
   }
 
   .social-logo {
